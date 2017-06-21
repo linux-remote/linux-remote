@@ -1,0 +1,17 @@
+{
+  "name": "linux-remote",
+  "version": "0.0.2",
+  "author": "Du Wei <hezedu@hotmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linux-remote/server.git"
+  },
+  "dependencies": {
+    "linux-remote-server": "*",
+    "linux-remote-client": "*"
+  },
+  "license": "MIT",
+  "email": "hezedu@hotmail.com",
+  "description": "The linux remote deskTop"
+}
