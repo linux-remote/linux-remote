@@ -3,15 +3,17 @@ A Web App for Linux Remote Desktop.
 
 Online Demo: https://lr.godmod.cn/
 
-username: <b>guest</b>, password: <b>123</b>
+username: <b>guest</b>  password: <b>123</b>
 # install
 ### Step 1
-`git clone git@github.com:linux-remote/linux-remote.git` or [download](https://github.com/linux-remote/linux-remote/archive/master.zip)
-this Project to you server `/opt` dir.
+`git clone --depth 1 git@github.com:linux-remote/linux-remote.git` or 
+
+[download](https://github.com/linux-remote/linux-remote/archive/master.zip)
+
+this Project to you server <b>`/opt`</b> dir.
 ### Step 2
 cd you dir,
 run `npm install`
-```
 
 ### Step 4
 modefiy file `config.js` like:
