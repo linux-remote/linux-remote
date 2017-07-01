@@ -56,7 +56,6 @@ linuxRemote({
 });
 ```
 ### Step 4
-Start:
+Start: `nohup node index.js &`
 
-`nohup node index.js &`
 Or some other process manager like: `forever`, `pm2`.
