@@ -52,6 +52,10 @@ module.exports = {
 };
 ```
 # Start
-`nohup node index.js &`
+`sudo nohup node index.js &`
 
 Or some other process manager. Such as: `forever`, `pm2`.
+
+# Change Files:
+`/var/tmp/linux-remote` <br>
+`/root/.linux-remote-data`
