@@ -6,17 +6,17 @@ Online Demo: https://lr.godmod.cn/
 username: <b>guest</b>  password: <b>123</b>
 # install
 ### Step 1
-mkdir in directory `/opt` like: `/opt/linux-remote`.
+mkdir in directory `/opt`. Such as: `/opt/linux-remote`.
 
-`git clone --depth 1 git@github.com:linux-remote/linux-remote.git` or 
+`git clone --depth 1 git@github.com:linux-remote/linux-remote.git` or
 [download](https://github.com/linux-remote/linux-remote/archive/master.zip)
-this Project to you dir. 
+this Project to you dir.
 ### Step 2
 cd you dir
 
 run `npm install`
 ### Step 3
-modefiy  `config.js` in you dir like:
+modefiy  `config.js` in you dir. Such as:
 
 ***Use self-signed's ssl server:***
 ```js
@@ -51,4 +51,4 @@ module.exports = {
 # Start
 `nohup node index.js &`
 
-Or some other process manager like: `forever`, `pm2`.
+Or some other process manager. Such as: `forever`, `pm2`.
