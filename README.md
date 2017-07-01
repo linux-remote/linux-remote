@@ -8,13 +8,15 @@ username: <b>guest</b>  password: <b>123</b>
 ### Step 1
 mkdir in directory `/opt`. Such as: `/opt/linux-remote`.
 
-cd you dir
-
 `git clone --depth 1 https://github.com/linux-remote/linux-remote.git` 
+
 or download:
 [https://github.com/linux-remote/linux-remote/archive/master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip)
+
 this Project to you dir.
 ### Step 2
+cd you dir
+
 run `npm install`
 ### Step 3
 modefiy  `config.js` in you dir. Such as:
