@@ -6,27 +6,19 @@ Online Demo: https://lr.godmod.cn/
 username: <b>guest</b>, password: <b>123</b>
 # install
 ### Step 1
-Create file `package.json`:
-```json
-{
-  "name": "my-linux-remote",
-  "private": true,
-  "main": "index.js",
-  "dependencies": {
-    "linux-remote": "*"
-  }
-}
-```
+`git clone git@github.com:linux-remote/linux-remote.git` or [download](https://github.com/linux-remote/linux-remote/archive/master.zip)
+this Project to you server `/opt` dir.
 ### Step 2
-run: `npm install`
+cd you dir,
+run `npm install`
+```
 
-### Step 3
-Create file `index.js` like:
+### Step 4
+modefiy file `config.js` like:
 
 ***Use self-signed's ssl server:***
 ```js
-var linuxRemote = require('linux-remote');
-linuxRemote({
+module.exports = {
   port: 3000,
   ssl: true,
   sslSelfSigned: {
@@ -34,29 +26,27 @@ linuxRemote({
     CA: null, // If not,will auto create. You can provide other CA:{key: 'somepath', cert: 'somepath'}
     CACertFirstDownloadKey: 'abc'
   }
-});
+};
 ```
 
 ***Use self's ssl certificate server:***
 ```js
-var linuxRemote = require('linux-remote');
-linuxRemote({
+module.exports = {
   ssl: {
     cert: '/etc/letsencrypt/live/lr.godmod.cn/cert.pem',
     key: '/etc/letsencrypt/live/lr.godmod.cn/privkey.pem'
   },
   port: 443
-});
+};
 ```
 
 ***Non ssl's http server:***
 ```js
-var linuxRemote = require('linux-remote');
-linuxRemote({
+module.exports = {
   port: 3000
-});
+};
 ```
-### Step 4
+### Step 5
 Start: `nohup node index.js &`
 
 Or some other process manager like: `forever`, `pm2`.
