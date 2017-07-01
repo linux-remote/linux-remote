@@ -16,7 +16,7 @@ cd you dir
 
 run `npm install`
 ### Step 3
-modefiy file `config.js` like:
+modefiy  `config.js` like:
 
 ***Use self-signed's ssl server:***
 ```js
