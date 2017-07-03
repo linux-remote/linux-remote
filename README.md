@@ -52,7 +52,12 @@ module.exports = {
 };
 ```
 # Start
-`sudo nohup node index.js &`
+Need start as root:
 
-Or some other process manager. Such as: `forever`, `pm2`.
+`sudo node index.js`
 
+This project initialization will create two files on your computer:
+
+`/root/.linux-remote-data`
+
+`/var/tmp/linux-remote`
