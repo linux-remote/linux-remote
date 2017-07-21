@@ -15,7 +15,7 @@ or download:
 
 this Project to you directory.
 ### Step 2
-cd you didirectoryr
+cd you didirectory
 
 run `npm install`
 ### Step 3
