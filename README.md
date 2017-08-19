@@ -1,7 +1,7 @@
 # linux-remote
-A Web App for Linux Remote Desktop.
-
-Online Demo: https://lr.godmod.cn/
+web端linux-remote远程桌面，纯前端项目。前端使用的[vue](https://github.com/vuejs/vue), 后端使用的[express](https://github.com/expressjs/express)。
+## Demo
+Online: https://lr.godmod.cn/
 
 username: <b>guest</b>  password: <b>123</b>
 ## install
