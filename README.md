@@ -3,8 +3,8 @@ web端linux-remote远程桌面，纯前端项目。前端使用的[vue](https://
 ## Demo
 Online: https://lr.godmod.cn/
 
-username: <b>guest</b>  password: <b>123</b>
-## install
+用户名(游客): <b>guest</b>  密码: <b>123</b>
+## 安装
 `cd /opt`
 
 `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`(or download:
@@ -13,10 +13,10 @@ username: <b>guest</b>  password: <b>123</b>
 `cd ./linux-remote`
 
 `npm install`
-## Config
-modefiy  `./config.js`. Such as:
+## 配置
+修改  `./config.js`. 如下:
 
-***Use self-signed's ssl server:***
+***使用自签名ssl证书***
 ```js
 module.exports = {
   port: 3000,
@@ -29,7 +29,7 @@ module.exports = {
 };
 ```
 
-***Use self's ssl certificate server:***
+***使用现成ssl证书***
 ```js
 module.exports = {
   ssl: {
@@ -46,7 +46,7 @@ module.exports = {
   port: 3000
 };
 ```
-## Start
+## 开始
 `sudo node index.js`
 
 ## 影响的文件夹
