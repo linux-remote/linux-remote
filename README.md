@@ -4,22 +4,16 @@ A Web App for Linux Remote Desktop.
 Online Demo: https://lr.godmod.cn/
 
 username: <b>guest</b>  password: <b>123</b>
-# install
-### Step 1
-make you  directory in directory `/opt`. Such as: `/opt/linux-remote`.
+## install
+`cd /opt`<br/>
+`git clone --depth 1 https://github.com/linux-remote/linux-remote.git` <br/>
+(or download:
+[linux-remote-master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip))
+`cd ./linux-remote`<br/>
+`npm install`
 
-`git clone --depth 1 https://github.com/linux-remote/linux-remote.git` 
-
-or download:
-[https://github.com/linux-remote/linux-remote/archive/master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip)
-
-this Project to you directory.
-### Step 2
-cd you didirectory
-
-run `npm install`
-### Step 3
-modefiy  `config.js`. Such as:
+## Config
+modefiy  `./config.js`. Such as:
 
 ***Use self-signed's ssl server:***
 ```js
@@ -51,7 +45,7 @@ module.exports = {
   port: 3000
 };
 ```
-# Start
+## Start
 Need start as root:
 
 `sudo node index.js`
