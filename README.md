@@ -5,13 +5,14 @@ Online Demo: https://lr.godmod.cn/
 
 username: <b>guest</b>  password: <b>123</b>
 ## install
-`cd /opt`<br/>
-`git clone --depth 1 https://github.com/linux-remote/linux-remote.git` <br/>
-(or download:
-[linux-remote-master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip))
-`cd ./linux-remote`<br/>
-`npm install`
+`cd /opt`
 
+`git clone --depth 1 https://github.com/linux-remote/linux-remote.git`(or download:
+[linux-remote-master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip))
+
+`cd ./linux-remote`
+
+`npm install`
 ## Config
 modefiy  `./config.js`. Such as:
 
