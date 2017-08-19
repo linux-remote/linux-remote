@@ -47,12 +47,9 @@ module.exports = {
 };
 ```
 ## Start
-Need start as root:
-
 `sudo node index.js`
 
-This project initialization will create two files on your computer:
-
+## 影响的文件夹
 `/root/.linux-remote-data`
 
 `/var/tmp/linux-remote`
