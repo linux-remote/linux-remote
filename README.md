@@ -1,9 +1,9 @@
 # linux-remote
-web端linux-remote远程桌面，纯前端项目。前端使用的[vue](https://github.com/vuejs/vue), 后端使用的[express](https://github.com/expressjs/express)。
-## Env
-后端: **Linux**系统,并有`ssh server`.
-
-前端: 只支持**Chrome**
+web端linux-remote远程桌面
+## 需求: 
+- Linux
+- ssh server
+- 浏览器: Chrome
 ## Demo
 Online: https://lr.godmod.cn/
 
@@ -11,8 +11,7 @@ Online: https://lr.godmod.cn/
 ## 安装
 `cd /opt`
 
-`git clone --depth 1 https://github.com/linux-remote/linux-remote.git`(or download:
-[linux-remote-master.zip](https://github.com/linux-remote/linux-remote/archive/master.zip))
+`git clone --depth 1 https://github.com/linux-remote/linux-remote.git`
 
 `cd ./linux-remote`
 
