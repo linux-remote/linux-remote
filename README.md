@@ -4,10 +4,7 @@ web端linux-remote远程桌面
 - Linux
 - ssh server
 - 浏览器: Chrome
-## Demo
-Online: https://lr.godmod.cn/
 
-用户名(游客): <b>guest</b>  密码: <b>123</b>
 ## 安装
 `cd /opt`
 
