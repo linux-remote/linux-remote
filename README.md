@@ -8,7 +8,7 @@ web端linux-remote远程桌面
 ## 安装
 `cd /opt`
 
-`git clone --depth 1 https://github.com/linux-remote/linux-remote.git`
+`git clone --depth 1 https://github.com/linux-remote/linux-remote.git` 或者[直接下载](https://github.com/linux-remote/linux-remote/archive/master.zip)解压
 
 `cd ./linux-remote`
 
@@ -19,7 +19,7 @@ web端linux-remote远程桌面
 ***使用自签名ssl证书***
 ```js
 module.exports = {
-  port: 3000,
+  port: 443,
   ssl: true,
   sslSelfSigned: {
     commonName: 'you domin name or ip',
