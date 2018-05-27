@@ -8,7 +8,7 @@ A webside remote desktop of Linux.
 ## Install
 `npm install linux-remote -g`
 
-`sudo linux-remote install`
+`linux-remote install`
 
 `cd /opt/linux-remote`
 

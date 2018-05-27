@@ -11,5 +11,8 @@
   },
   "license": "MIT",
   "email": "hezedu@hotmail.com",
-  "description": "A webside remote desktop of Linux."
+  "description": "A webside remote desktop of Linux.",
+  "dependencies": {
+    "uid-safe": "^2.1.5"
+  }
 }
