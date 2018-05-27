@@ -22,7 +22,7 @@ switch(param){
   break;
   case 'start':
     execSync('cd /opt/linux-remote');
-    execSync("su -c 'nohup node index.js > /dev/null 2>err.log &' linux-remote");
+    execSync("su -c 'NODE_ENV=production nohup node index.js > /dev/null 2>err.log &' linux-remote");
     console.log('linux-remote start complete!');
   break;
   case 'stop':
