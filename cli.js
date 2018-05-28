@@ -23,16 +23,16 @@ function initProject(){
   execSync('chmod -R 700 /opt/linux-remote');
   //console.log('init project ok.');
 }
-function initLocal(){
-  var dir = '/var/local/linux-remote';
-  execSync('mkdir -m=755 -p ' + dir);
-  execSync('chown linux-remote:linux-remote ' + dir);
-  execSync('mkdir -m=1777 -p ' + dir + '/session');
-  execSync('chown linux-remote:linux-remote ' + dir + '/session');
-  execSync('mkdir -m=1777 -p ' + dir + '/user');
-  execSync('chown linux-remote:linux-remote ' + dir + '/user');
-  //console.log('init local data ok.');
-}
+// function initLocal(){
+//   var dir = '/var/local/linux-remote';
+//   execSync('mkdir -m=755 -p ' + dir);
+//   execSync('chown linux-remote:linux-remote ' + dir);
+//   execSync('mkdir -m=1777 -p ' + dir + '/session');
+//   execSync('chown linux-remote:linux-remote ' + dir + '/session');
+//   execSync('mkdir -m=1777 -p ' + dir + '/user');
+//   execSync('chown linux-remote:linux-remote ' + dir + '/user');
+//   //console.log('init local data ok.');
+// }
 switch(param){
   case '-v':
     console.log(pkg.version);
@@ -40,7 +40,7 @@ switch(param){
   case 'init':
     execSync('useradd -d /opt/linux-remote linux-remote');
     initProject();
-    initLocal();
+    //initLocal();
     console.log('linux-remote init complete!');
   break;
   case 'install':
@@ -65,8 +65,7 @@ switch(param){
     // _update();
   break;
   case 'start':
-    execSync('cd /opt/linux-remote');
-    execSync("su -c 'NODE_ENV=production nohup node index.js > /dev/null 2>err.log &' linux-remote");
+    execSync("su -c 'NODE_ENV=production nohup node index.js > /dev/null 2>err.log &' linux-remote", {stdio : 'inherit', cwd: '/opt/linux-remote'});
     console.log('linux-remote start complete!');
   break;
   case 'stop':
@@ -74,28 +73,10 @@ switch(param){
     console.log('linux-remote stop complete!');
   break;
   case 'uninit':
-
-      process.stdin.write('Do you want to keep user data? [y/n]:');
-      process.stdin.on('readable', function() {
-        var chunk = process.stdin.read();
-        if (chunk !== null) {
-          chunk = chunk.toLowerCase();
-          chunk = chunk.trim();
-          if (chunk === 'n') {
-            execSync('rm -rf /var/local/linux-remote');
-            console.log('linux-remote clear user data ok.');
-          }
-          done();
-          function done(){
-            execSync('userdel -r linux-remote');
-            console.log('linux-remote uninit complete!');
-            process.stdin.end();
-          }
-        }
-      });
-
+    execSync('userdel -r linux-remote');
+    console.log('linux-remote uninit complete!');
   break;
   default:
-  console.log('param accepted:');
+  console.log('param  only accepted:');
   console.log('-v, init, install, start, stop, update, uninit');
 }
