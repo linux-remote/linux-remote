@@ -14,13 +14,19 @@ process.stdin.setEncoding('utf8');
 
 function initProject(){
   execSync('cp -r '+ path.join(__dirname, 'tpl') + '/. /opt/linux-remote');
-  execSync('chown -R linux-remote:linux-remote /opt/linux-remote');
+  
 
   var configStr = fs.readFileSync('/opt/linux-remote/config.js', 'utf-8');
   configStr = configStr.replace('{{sessionSecret}}', uid.sync(30));
   fs.writeFileSync('/opt/linux-remote/config.js', configStr);
 
-  execSync('chmod -R 700 /opt/linux-remote');
+  
+  execSync('chmod -R 755 /opt/linux-remote');
+
+  execSync('chmod 700 /opt/linux-remote/config.js');
+  execSync('chmod 1777 /opt/linux-remote/ttl');
+
+  execSync('chown -R linux-remote:linux-remote /opt/linux-remote');
   //console.log('init project ok.');
 }
 // function initLocal(){
