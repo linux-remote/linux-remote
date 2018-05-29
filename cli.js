@@ -24,7 +24,7 @@ function initProject(){
   execSync('chmod -R 755 /opt/linux-remote');
 
   execSync('chmod 700 /opt/linux-remote/config.js');
-  execSync('chmod 1777 /opt/linux-remote/ttl');
+  execSync('mkdir -m=1777 /opt/linux-remote/session');
 
   execSync('chown -R linux-remote:linux-remote /opt/linux-remote');
   //console.log('init project ok.');
