@@ -5,7 +5,8 @@ var fs = require('fs');
 var pkg = require('./package.json');
 var path = require('path');
 var uid = require('uid-safe');
-
+var tmpdir = os.tmpdir();
+var errLogPath = path.join(tmpdir, 'linux-remote-err.log');
 var args = process.argv.slice(1);
 args.shift();
 var param = args.join(' ');
@@ -71,7 +72,7 @@ switch(param){
     // _update();
   break;
   case 'start':
-    execSync("su -c 'NODE_ENV=production nohup node index.js > /dev/null 2>err.log &' linux-remote", {stdio : 'inherit', cwd: '/opt/linux-remote'});
+    execSync(`su -c 'NODE_ENV=production nohup node index.js > /dev/null 2>${errLogPath} &' linux-remote`, {stdio : 'inherit', cwd: '/opt/linux-remote'});
     console.log('linux-remote start complete!');
   break;
   case 'stop':
