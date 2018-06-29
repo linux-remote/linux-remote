@@ -44,4 +44,4 @@ module.exports = {
 - Optimization
 
 # Donate
-Donate me or Be my sponsor. I can't finish it without support.
+Donate me or Be my sponsor.
