@@ -40,4 +40,5 @@ module.exports = {
 # uninstall
 `linux-remote uninstall`
 
-# Donate me or Be my sponsor
+# Donate
+Donate me or Be my sponsor. I can't finish it without support.
