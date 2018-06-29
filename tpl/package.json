@@ -1,9 +1,9 @@
 {
   "name": "linux-remote-project",
   "private": true,
-  "version": "0.0.6",
+  "version": "1.0.0",
   "author": "Du Wei <hezedu@hotmail.com>",
-  "main": "index.js",
+  "main": "cli.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:linux-remote/server.git"
