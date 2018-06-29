@@ -4,7 +4,7 @@ var execSync = require('child_process').execSync;
 var fs = require('fs');
 var pkg = require('./package.json');
 var path = require('path');
-var uid = require('uid-safe');
+var crypto = require('crypto');
 var os = require('os');
 var tmpdir = os.tmpdir();
 var errLogPath = path.join(tmpdir, 'linux-remote-err.log');
@@ -14,15 +14,18 @@ var param = args.join(' ');
 
 process.stdin.setEncoding('utf8');
 
+function _getSecret(){
+  var buf = crypto.randomBytes(18);
+  buf = buf.toString('base64');
+  return buf + Date.now();
+}
 function initProject(){
   execSync('cp -r '+ path.join(__dirname, 'tpl') + '/. /opt/linux-remote');
   
-
   var configStr = fs.readFileSync('/opt/linux-remote/config.js', 'utf-8');
-  configStr = configStr.replace('{{sessionSecret}}', uid.sync(30));
+  configStr = configStr.replace('{{sessionSecret}}', _getSecret());
   fs.writeFileSync('/opt/linux-remote/config.js', configStr);
 
-  
   execSync('chmod -R 755 /opt/linux-remote');
 
   execSync('chmod 700 /opt/linux-remote/config.js');
