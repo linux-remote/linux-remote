@@ -37,5 +37,12 @@ module.exports = {
 ## 开始
 `sudo node index.js`
 
-# uninstall
-`linux-remote uninstall`
+# Future
+- C++ addons for json api. 
+- Webscket push Server.
+- Beautiful UI.
+- Optimization
+
+# Donate
+Donate me or Be my sponsor.
+![image](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png)
