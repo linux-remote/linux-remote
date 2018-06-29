@@ -37,8 +37,11 @@ module.exports = {
 ## 开始
 `sudo node index.js`
 
-# uninstall
-`linux-remote uninstall`
+# Future
+- C++ addons for json api. 
+- Webscket push Server.
+- Beautiful UI.
+- Optimization
 
 # Donate
 Donate me or Be my sponsor. I can't finish it without support.
