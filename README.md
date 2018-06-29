@@ -45,3 +45,4 @@ module.exports = {
 
 # Donate
 Donate me or Be my sponsor.
+![image](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png)
