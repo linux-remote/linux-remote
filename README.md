@@ -26,7 +26,7 @@ __/opt__ dir only writable for root. so you should be: `sudo`
 or<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
-If you don't want used **root** start up. You should be use:  `sudo chown $(whoami) linux-remote`
+If you don't want used **root** start up. You should be use:  `sudo -R chown $(whoami) linux-remote`
 
 <br>
 
