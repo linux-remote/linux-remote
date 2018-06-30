@@ -9,7 +9,11 @@ This project is guide of two major projects:<br>
 - Nodejs.
 - SSH server on the Linux.
 - Latest Chrome browsers.
-
+## Online Demo
+https://lr.godmod.cn
+<br>
+username: **guest** <br>
+password: **123**
 ## Install
 
 **Step 1:** `cd /opt`
@@ -32,8 +36,7 @@ or<br>
 
 **Step 5:** `node init`
 
-It will generate config.js.
-
+It will generate config.js, and set permission.For The Security, You just can start by youself or root.
 <br>
 
 **Step 6:** Modify `config.js` eg:
@@ -54,8 +57,6 @@ module.exports = {
 
 };
 ```
-For The Security, `config.js`'s mod is `700`. You just can start by youself or root.
-
 ## Start
 `node index.js`
 
@@ -68,10 +69,11 @@ nohup start:
 
 You also can use some process manager like `pm2`:
 
-`pm2 start -o /dev/null -e /tmp/linux-remote-err.log index.js`
+`pm2 start index.js -o /dev/null -e /tmp/linux-remote-err.log --name linux-remote`
+
 
 # Future
-- C++ addons for json api. 
+- C++ addons for json api.
 - Webscket push Server.
 - Third party app and LANG package.
 - Beautiful UI.
@@ -86,3 +88,6 @@ Donate me or Be my sponsor.<br>
 
 ## Patreon
 [Du Wei is creating linux-remote](https://www.patreon.com/duwei)
+
+## Thank For
+Not yet
