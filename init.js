@@ -15,4 +15,4 @@ fs.writeFileSync(configPath, tplStr);
 
 execSync('chmod 700 ' + configPath);
 
-console.log('\n linux-remote init OK!');
+console.log('\nlinux-remote init OK!\n');
