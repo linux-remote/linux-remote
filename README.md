@@ -1,7 +1,7 @@
 # linux-remote
 A Webside Remote Desktop of Linux.
 
-This is just a cli tool. The Main projects is:<br>
+This is a cli tool. Guide of two major projects:<br>
 [client](https://github.com/linux-remote/client)<br>
 [server](https://github.com/linux-remote/server)
 ## Requested
