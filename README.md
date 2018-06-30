@@ -66,11 +66,6 @@ module.exports = {
 
 <br>
 
-nohup start:
-
-`nohup node index.js >/dev/null 2>>/tmp/linux-remote-err.log &`
-
-
 You also can use some process manager like `pm2`:
 
 `pm2 start index.js -o /dev/null -e /tmp/linux-remote-err.log --name linux-remote`
