@@ -5,7 +5,7 @@ This project is a guide for two major projects:<br>
 [**linux-remote-client**](https://github.com/linux-remote/client)<br>
 [**linux-remote-server**](https://github.com/linux-remote/server)
 ## Requested
-- A Linux system.
+- Linux.
 - Nodejs.
 - SSH server on the Linux.
 - Latest Chrome browsers.
@@ -23,10 +23,10 @@ __/opt__ dir only writable for root. so you should use: `sudo`
 <br>
 
 **Step 2:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
-or<br>
+or:<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
-If you don't want used **root** start up. You should use:  `sudo chown -R $(whoami) linux-remote`
+If you don't want to use **root** start up. You should use:  `sudo chown -R $(whoami) linux-remote`
 
 <br>
 
