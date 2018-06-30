@@ -38,7 +38,7 @@ or<br>
 
 **Step 5:** `node init`
 
-It will generate config.js, and set permission.For The Security, You just can start by creator or root.
+It will generate config.js, and set permission.For The Security, The website just can start by creator or root.
 <br>
 
 **Step 6:** Modify `config.js` eg:
