@@ -24,6 +24,8 @@ password: **123**
 or<br>
 `wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && unzip -q linux-remote.zip && mv linux-remote-master linux-remote && rm linux-remote.zip`
 
+`/opt` dir only writable for root. so you should be use `sudo`.
+
 <br>
 
 **Step 3:** `cd ./linux-remote`
