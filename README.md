@@ -52,11 +52,10 @@ module.exports = {
 
   ssl : null, // http model, Unsafe, null or an Object {cert, key}, default: null.
   /*
-    // https model
-    ssl: { 
-      cert: '/somedir/cert.pem',
-      key: '/somedir/privkey.pem'
-    },
+  ssl: {  // https model
+    cert: '/somedir/cert.pem',
+    key: '/somedir/privkey.pem'
+  },
   */
   
   sessionSecret: 'some random str' //For the cookie encryption. generate by init. You don't need modify it.
