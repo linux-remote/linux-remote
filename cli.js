@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var execSync = require('child_process').execSync;
+var {execSync, spawnSync} = require('child_process');
 var fs = require('fs');
 var pkg = require('./package.json');
 var path = require('path');
@@ -52,7 +52,6 @@ switch(param){
 
   break;
   case 'update':
-    execSync('npm update linux-remote@latest -g', {stdio : 'inherit', cwd: '/opt/linux-remote'});
     execSync('npm update', {stdio : 'inherit', cwd: '/opt/linux-remote'});
     console.log('linux-remote update complete!\n');
   break;
@@ -61,7 +60,7 @@ switch(param){
     console.log('linux-remote start complete!\n');
   break;
   case 'stop':
-    execSync('killall -u linux-remote -9');
+    spawnSync('killall', ["-u", "linux-remote"], {stdio:"inherit"});
     console.log('linux-remote stop complete!\n');
   break;
   case 'uninit':

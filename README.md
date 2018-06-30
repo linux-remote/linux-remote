@@ -1,48 +1,79 @@
 # linux-remote
-A webside remote desktop of Linux.
+A Webside Remote Desktop of Linux.
+
+This is just a cli tool. The Main projects is:<br>
+[client](https://github.com/linux-remote/client)<br>
+[server](https://github.com/linux-remote/server)
 ## Requested
 - A Linux system.
-- ssh server
-- A Modern Browser like Chrome.
+- SSH server on the Linux.
+- Latest Chrome browsers.
 
 ## Install
-`npm install linux-remote -g`
+**Step 1:** `npm install linux-remote -g`
 
-`linux-remote install`
+<br>
 
-`cd /opt/linux-remote`
+**Step 2:** `linux-remote init`
 
-`npm install`
+It will create a new user `linux-remote`. So you should use `root` identity.
 
-## Config
-修改  `./config.js`. 如下:
-***http server:***
+<br>
+
+**Step 3:** `cd /opt/linux-remote`
+
+The Website config file **config.js** is in this folder.  For security,  It just can read or write for user `linux-remote`. So you should use `root` identity to modify it.
 ```js
 module.exports = {
-  port: 3000
+  port: 3000, // listen port. default: 3000
+  sshPort: 22, // SSH server. just used for login. default: 22
+  ssl : null, // http model, Unsafe, null or an Object {cert, key}, default: null.
+  // ssl: { // https model
+  //  cert: '/somedir/cert.pem',
+  //  key: '/somedir/privkey.pem'
+  // },
+  
+  sessionSecret: 'xxxxxxxx...' //auto generation by init, For the cookie encryption. You don't need to modify it.
 };
 ```
 
+___npm___: If you can't be used normally npm, You can put [.npmrc](https://docs.npmjs.com/files/npmrc) file in this folder.
 
-***使用现成ssl证书***
-```js
-module.exports = {
-  ssl: {
-    cert: '/etc/letsencrypt/live/lr.godmod.cn/cert.pem',
-    key: '/etc/letsencrypt/live/lr.godmod.cn/privkey.pem'
-  },
-  port: 443
-};
-```
-## 开始
-`sudo node index.js`
+<br>
+
+**Step 4:** `linux-remote install`
+
+Install npm package. eq `cd /opt/linux-remote && npm install`
+
+## Start
+`linux-remote start`
+
+It will start the main process with user `linux-remote`. So you should use `root` identity(___Not starting with root___).
+## Other
+`linux-remote stop`
+
+kill main process.
+
+`linux-remote update`
+
+Update npm package. eq `cd /opt/linux-remote && npm update`
+
+`linux-remote uninit`
+
+Remove user `linux-remote` and delete `/opt/linux-remote` folder.
+
+`linux-remote -v`
+
+Show version of this cli.
 
 # Future
 - C++ addons for json api. 
 - Webscket push Server.
+- Third party app and LANG package.
 - Beautiful UI.
 - Optimization
 
 # Donate
 Donate me or Be my sponsor.
-![image](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png)
+<a href="https://www.paypal.me/hezedu" target="_blank"><img src="https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png"></a>
+
