@@ -11,17 +11,32 @@ This project is guide of two major projects:<br>
 - Latest Chrome browsers.
 
 ## Install
-**Step 1:** `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
+
+**Step 1:** `cd /opt`
+
+<br>
+
+**Step 2:** `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
 or<br>
 `wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && unzip -q linux-remote.zip && mv linux-remote-master linux-remote && rm linux-remote.zip`
 
 <br>
 
-**Step 2:** `cd ./linux-remote`
+**Step 3:** `cd ./linux-remote`
 
 <br>
 
-**Step 3:** Modify `config.js` eg:
+**Step 4:** `npm install`
+
+<br>
+
+**Step 5:** `node init`
+
+It will generate `config.js`.
+
+<br>
+
+**Step 6:** Modify `config.js` eg:
 ```js
 module.exports = {
   port: 3001, // listen port. default: 3001
@@ -35,30 +50,23 @@ module.exports = {
   //  key: '/somedir/privkey.pem'
   // },
   
-  sessionSecret: '' //some random str for the cookie encryption. required.
-  /* 
-    You can used nodejs crypto's randomBytes to generate it:
-    var crypto = require('crypto');
-    crypto.randomBytes(18).toString('base64') + Date.now();
-  */
+  sessionSecret: 'some random str' //For the cookie encryption. generate by init. You don't need modify it.
+
 };
 ```
-
-<br>
-
-**Step 4:** For The Security:
-
-`chmod 700 config.js`
-
-You just can start by youself or root.
-
+For The Security, `config.js`'s mod is `700`. You just can start by youself or root.
 
 ## Start
 `node index.js`
 
 <br>
 
-You can use some process manager like `pm2`:
+nohup start:
+
+`nohup node index.js >/dev/null 2>>/tmp/linux-remote-err.log &`
+
+
+You also can use some process manager like `pm2`:
 
 `pm2 start -o /dev/null -e /tmp/linux-remote-err.log index.js`
 

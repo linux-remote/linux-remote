@@ -10,5 +10,5 @@ module.exports = {
   //  key: '/somedir/privkey.pem'
   // },
   
-  sessionSecret: 'pJ8BFzCWuPucsKCbLj+pVWYQ1530355187251' //For the cookie encryption. generate by init. You don't need modify it.
+  sessionSecret: '{{sessionSecret}}' //For the cookie encryption. generate by init. You don't need modify it.
 };
