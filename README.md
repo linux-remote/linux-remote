@@ -88,5 +88,5 @@ Donate me or Be my sponsor.<br>
 ## Patreon
 [Du Wei is creating linux-remote](https://www.patreon.com/duwei)
 
-## Thank For
-Not yet
+## Thanks For
+
