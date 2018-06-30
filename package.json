@@ -1,16 +1,18 @@
 {
   "name": "linux-remote",
+  "private": true,
   "version": "1.0.1",
   "author": "Du Wei <hezedu@hotmail.com>",
-  "bin": {
-    "linux-remote": "cli.js"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:linux-remote/server.git"
   },
+  "dependencies": {
+    "linux-remote-server": "latest",
+    "linux-remote-client": "latest"
+  },
   "license": "MIT",
   "email": "hezedu@hotmail.com",
   "description": "A webside remote desktop of Linux."
-
 }
