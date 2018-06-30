@@ -79,3 +79,6 @@ Donate me or Be my sponsor.<br>
 | Paypal | AliPay | WechatPay |
 | ------------- | ------------- | ------------- |
 | <a href="https://www.paypal.me/hezedu" target="_blank"><img src="https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png"></a> | ![image](https://github.com/hezedu/SomethingBoring/blob/master/pay/alipay.png?raw=true&v=2) | ![image](https://github.com/hezedu/SomethingBoring/blob/master/pay/wxpay.png?raw=true&v=2) |
+
+## Patreon
+[Du Wei is creating linux-remote](https://www.patreon.com/duwei)
