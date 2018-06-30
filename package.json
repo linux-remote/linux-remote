@@ -1,7 +1,7 @@
 {
   "name": "linux-remote",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Du Wei <hezedu@hotmail.com>",
   "main": "index.js",
   "repository": {
