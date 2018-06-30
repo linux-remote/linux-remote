@@ -20,12 +20,19 @@ It will create a new user `linux-remote`. So you should use `root` identity.
 
 <br>
 
-**Step 3:** `cd /opt/linux-remote`
+
+**Step 3:** `linux-remote install`
+
+Install npm package. equal: `cd /opt/linux-remote && npm install`
+
+<br>
+
+**Step 4:** `cd /opt/linux-remote`
 
 The Website config file **config.js** is in this folder.  For security,  It just can read or write for user `linux-remote`. So you should use `root` identity to modify it.
 ```js
 module.exports = {
-  port: 3000, // listen port. default: 3000
+  port: 3001, // listen port. default: 3001
   sshPort: 22, // SSH server. just used for login. default: 22
   ssl : null, // http model, Unsafe, null or an Object {cert, key}, default: null.
   // ssl: { // https model
@@ -39,11 +46,6 @@ module.exports = {
 
 ___npm___: If you can't be used normally npm, You can put [.npmrc](https://docs.npmjs.com/files/npmrc) file in this folder.
 
-<br>
-
-**Step 4:** `linux-remote install`
-
-Install npm package. eq `cd /opt/linux-remote && npm install`
 
 ## Start
 `linux-remote start`
@@ -56,7 +58,7 @@ kill main process.
 
 `linux-remote update`
 
-Update npm package. eq `cd /opt/linux-remote && npm update`
+Update npm package. equal: `cd /opt/linux-remote && npm update`
 
 `linux-remote uninit`
 

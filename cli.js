@@ -42,30 +42,29 @@ switch(param){
     execSync('useradd -d /opt/linux-remote linux-remote');
     initProject();
     //initLocal();.npmrc
-    console.log('linux-remote init complete!');
-    console.log('Config path is: "/opt/linux-remote/config.js"');
-    console.log('If you want set some npm config(like --registry), You can put ".npmrc" in the "/opt/linux-remote" folder.\n');
+    console.log('\nlinux-remote init complete!\n');
+    // console.log('Config path is: "/opt/linux-remote/config.js"');
+    // console.log('If you want set some npm config(like --registry), You can put ".npmrc" in the "/opt/linux-remote" folder.\n');
   break;
   case 'install':
     execSync('npm install', {stdio : 'inherit', cwd: '/opt/linux-remote'});
-    console.log('linux-remote install complete!\n');
-
+    console.log('\nlinux-remote install complete!\n');
   break;
   case 'update':
     execSync('npm update', {stdio : 'inherit', cwd: '/opt/linux-remote'});
-    console.log('linux-remote update complete!\n');
+    console.log('\nlinux-remote update complete!\n');
   break;
   case 'start':
     execSync(`su -c 'NODE_ENV=production nohup node index.js >/dev/null 2>>${errLogPath}&' linux-remote`, {stdio : 'inherit', cwd: '/opt/linux-remote'});
-    console.log('linux-remote start complete!\n');
+    console.log('\nlinux-remote start complete!\n');
   break;
   case 'stop':
     spawnSync('killall', ["-u", "linux-remote"], {stdio:"inherit"});
-    console.log('linux-remote stop complete!\n');
+    console.log('\nlinux-remote stop complete!\n');
   break;
   case 'uninit':
     execSync('userdel -r linux-remote');
-    console.log('linux-remote uninit complete!\n');
+    console.log('\nlinux-remote uninit complete!\n');
   break;
   default:
   console.log('param  only accepted:');

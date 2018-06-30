@@ -1,5 +1,5 @@
 module.exports = {
-  port: 3000,
+  port: 3001,
   sessionSecret: "{{sessionSecret}}",
   sshPort: 22,
   ssl: null
