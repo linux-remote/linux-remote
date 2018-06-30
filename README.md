@@ -2,8 +2,8 @@
 A Webside Remote Desktop of Linux.
 
 This project is guide of two major projects:<br>
-[client](https://github.com/linux-remote/client)<br>
-[server](https://github.com/linux-remote/server)
+[**client**](https://github.com/linux-remote/client)<br>
+[**server**](https://github.com/linux-remote/server)
 ## Requested
 - A Linux system.
 - Nodejs.
@@ -32,7 +32,7 @@ or<br>
 
 **Step 5:** `node init`
 
-It will generate `config.js`.
+It will generate config.js.
 
 <br>
 
