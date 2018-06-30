@@ -18,7 +18,7 @@ password: **123**
 
 **Step 1:** `cd /opt`
 
-__/opt__ dir only writable for root. so you should use: `sudo`
+___/opt___ dir only writable for root. so you should use: `sudo`
 
 <br>
 
@@ -46,9 +46,9 @@ It will generate config.js, and set permission. For The Security, The website ca
 **Step 6:** Setting `config.js`:
 ```js
 module.exports = {
-  port: 3001, // listen port. default: 3001
+  port: 3001, // Website listen port. default: 3001
 
-  sshPort: 22, // SSH server. just use it for login. default: 22
+  sshPort: 22, // SSH server listen port, just use it for login. default: 22
 
   ssl : null, // http model, Unsafe,  default: null.
 
