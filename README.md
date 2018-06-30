@@ -71,6 +71,10 @@ You also can use some process manager like `pm2`:
 
 `pm2 start index.js -o /dev/null -e /tmp/linux-remote-err.log --name linux-remote`
 
+<br>
+
+## Update
+`cd /opt/linux-remote && npm update`
 
 ## Future
 - C++ addons for json api.
