@@ -58,6 +58,7 @@ module.exports = {
       key: '/somedir/privkey.pem'
     },
   */
+  
   sessionSecret: 'some random str' //For the cookie encryption. generate by init. You don't need modify it.
 
 };
