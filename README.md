@@ -20,9 +20,9 @@ password: **123**
 
 <br>
 
-**Step 2:** `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
+**Step 2:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
 or<br>
-`wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && unzip -q linux-remote.zip && mv linux-remote-master linux-remote && rm linux-remote.zip`
+`sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
 `/opt` dir only writable for root. so you should be use `sudo`.
 
