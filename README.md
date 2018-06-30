@@ -48,7 +48,7 @@ It will generate config.js, and set permission. For The Security, The website ca
 module.exports = {
   port: 3001, // listen port. default: 3001
 
-  sshPort: 22, // SSH server. just used for login. default: 22
+  sshPort: 22, // SSH server. just use it for login. default: 22
 
   ssl : null, // http model, Unsafe,  default: null.
 
