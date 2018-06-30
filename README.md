@@ -18,13 +18,15 @@ password: **123**
 
 **Step 1:** `cd /opt`
 
-__/opt__ dir only writable for root. so you should be use `sudo su`
+__/opt__ dir only writable for root. so you should be use `sudo`
 
 <br>
 
-**Step 2:** `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
+**Step 2:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
 or<br>
-`wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && unzip -q linux-remote.zip && mv linux-remote-master linux-remote && rm linux-remote.zip`
+`sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
+
+If you don't want used `root` start up. You should be:  `sudo chmod 700 linux-remote`.
 
 <br>
 
