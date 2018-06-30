@@ -3,9 +3,7 @@ var path = require('path');
 var {execSync} = require('child_process');
 var fs = require('fs');
 
-
-var tplStr = fs.readFileSync(path.join(__dirname, 'config.tpl.js'), 'utf-8');
-
+var tplStr = fs.readFileSync(path.join(__dirname, 'tpl.config.js'), 'utf-8');
 
 var secret = crypto.randomBytes(18).toString('base64') + Date.now();
 tplStr = tplStr.replace('{{sessionSecret}}', secret);
