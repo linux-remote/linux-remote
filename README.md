@@ -18,7 +18,7 @@ password: **123**
 
 **Step 1:** `cd /opt`
 
-__/opt__ dir only writable for root. so you should be: `sudo`
+__/opt__ dir only writable for root. so you should use: `sudo`
 
 <br>
 
@@ -26,7 +26,7 @@ __/opt__ dir only writable for root. so you should be: `sudo`
 or<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
-If you don't want used **root** start up. You should be use:  `sudo chown -R $(whoami) linux-remote`
+If you don't want used **root** start up. You should use:  `sudo chown -R $(whoami) linux-remote`
 
 <br>
 
@@ -40,7 +40,7 @@ If you don't want used **root** start up. You should be use:  `sudo chown -R $(w
 
 **Step 5:** `node init`
 
-It will generate config.js, and set permission. For The Security, The website just can start by creator or root.
+It will generate config.js, and set permission. For The Security, The website just can start up by yourself or root.
 <br>
 
 **Step 6:** Modify `config.js` eg:
@@ -79,7 +79,7 @@ You also can use some process manager like `pm2`:
 # Future
 - C++ addons for json api.
 - Webscket push Server.
-- Third party app and LANG package.
+- Third party app and language package.
 - Beautiful UI.
 - Optimization
 
