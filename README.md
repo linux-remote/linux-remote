@@ -50,7 +50,7 @@ module.exports = {
 
   sshPort: 22, // SSH server listen port, just use it for login. default: 22
 
-  ssl : null, // http model, Unsafe,  default: null.
+  ssl : null, // http model, Unsafe, null or an Object {cert, key}, default: null.
 
   // ssl: { // https model
   //  cert: '/somedir/cert.pem',
