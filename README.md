@@ -18,13 +18,13 @@ password: **123**
 
 **Step 1:** `cd /opt`
 
+__/opt__ dir only writable for root. so you should be use `sudo su`
+
 <br>
 
-**Step 2:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
+**Step 2:** `git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
 or<br>
-`sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
-
-`/opt` dir only writable for root. so you should be use `sudo`.
+`wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && unzip -q linux-remote.zip && mv linux-remote-master linux-remote && rm linux-remote.zip`
 
 <br>
 
@@ -38,7 +38,7 @@ or<br>
 
 **Step 5:** `node init`
 
-It will generate config.js, and set permission.For The Security, You just can start by youself or root.
+It will generate config.js, and set permission.For The Security, You just can start by creator or root.
 <br>
 
 **Step 6:** Modify `config.js` eg:
