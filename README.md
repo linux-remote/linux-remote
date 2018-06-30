@@ -51,12 +51,13 @@ module.exports = {
   sshPort: 22, // SSH server listen port, just use it for login. default: 22
 
   ssl : null, // http model, Unsafe, null or an Object {cert, key}, default: null.
-
-  // ssl: { // https model
-  //  cert: '/somedir/cert.pem',
-  //  key: '/somedir/privkey.pem'
-  // },
-  
+  /*
+    // https model
+    ssl: { 
+      cert: '/somedir/cert.pem',
+      key: '/somedir/privkey.pem'
+    },
+  */
   sessionSecret: 'some random str' //For the cookie encryption. generate by init. You don't need modify it.
 
 };
