@@ -18,7 +18,7 @@ https://lr.godmod.cn
 
 **第 1 步:** `cd /opt`
 
-___/opt___ 目录只 root 用户有修改权限。所以你应该使用： `sudo`
+___/opt___ 目录只 root 用户有修改权限。所以你应该使用：`sudo`
 
 <br>
 
