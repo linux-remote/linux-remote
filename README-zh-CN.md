@@ -7,7 +7,7 @@
 ## 必要项
 - Linux.
 - Nodejs.
-- Linux上需要有 SSH 服务器。
+- Linux 上需要有 SSH 服务器。
 - 最新的 Chrome 浏览器。
 ## 线上演示
 https://lr.godmod.cn
@@ -48,9 +48,9 @@ ___/opt___ 目录只 root 用户有修改权限。所以你应该使用： `sudo
 module.exports = {
   port: 3001, // 网站监听端口. 默认: 3001
 
-  sshPort: 22, // SSH 服务器 监听, 只是用来登录. 默认: 22
+  sshPort: 22, // SSH 服务器监听端口, 只是用来登录. 默认: 22
 
-  ssl : null, // http 模式, 不安全,  默认: null.
+  ssl : null, // http 模式, 不安全, 默认: null.
   /*
   ssl: {  // 或者提供一个 Object {cert, key} 来开启 https 模式: 
     cert: '/somedir/cert.pem',
