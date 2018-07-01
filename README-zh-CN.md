@@ -94,4 +94,4 @@ module.exports = {
 [Du Wei is creating linux-remote](https://www.patreon.com/duwei)
 
 ## 感谢
-见[README.md](README.md)
+见[README.md](README.md#thanks-for)
