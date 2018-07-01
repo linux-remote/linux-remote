@@ -16,13 +16,13 @@ https://lr.godmod.cn
 密码: **123**
 ## 安装
 
-**第1步:** `cd /opt`
+**第 1 步:** `cd /opt`
 
 ___/opt___ 目录只 root 用户有修改权限。所以你应该使用： `sudo`
 
 <br>
 
-**第2步:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
+**第 2 步:** `sudo git clone --depth 1 https://github.com/linux-remote/linux-remote.git`<br>
 或者:<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
@@ -30,20 +30,20 @@ ___/opt___ 目录只 root 用户有修改权限。所以你应该使用： `sudo
 
 <br>
 
-**第3步:** `cd ./linux-remote`
+**第 3 步:** `cd ./linux-remote`
 
 <br>
 
-**第4步:** `npm install`
+**第 4 步:** `npm install`
 
 <br>
 
-**第5步:** `node init`
+**第 5 步:** `node init`
 
 它将会生成 config.js，并设置权限。为了安全，网站只能由你自己或 root 来启动。
 <br>
 
-**第6步:** 配置 `config.js`:
+**第 6 步:** 配置 `config.js`:
 ```js
 module.exports = {
   port: 3001, // 网站监听端口. 默认: 3001
