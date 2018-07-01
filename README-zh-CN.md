@@ -1,4 +1,4 @@
-[English](README-en.md) | 中文
+[English](README.md) | 中文
 # linux-remote
 一个网页端的 Linux 远程桌面.
 
