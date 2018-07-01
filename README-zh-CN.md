@@ -12,8 +12,8 @@
 ## 线上演示
 https://lr.godmod.cn
 <br>
-username: **guest** <br>
-password: **123**
+用户名: **guest** <br>
+密码: **123**
 ## 安装
 
 **第1步:** `cd /opt`
