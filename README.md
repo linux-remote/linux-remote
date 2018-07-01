@@ -1,4 +1,3 @@
-English | [中文](README-zh-CN.md)
 # linux-remote
 A Webside Remote Desktop of Linux.
 
