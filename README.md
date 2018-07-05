@@ -28,7 +28,7 @@ ___/opt___ 目录只 root 用户有修改权限。所以你应该使用：`sudo`
 或者:<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
-如果你不想用 **root** 身份启动。 你应该： `sudo chown -R $(whoami) linux-remote`
+如果你不想用 **root** 身份启动。 你可以： `sudo chown -R $(whoami) linux-remote`
 
 <br>
 
