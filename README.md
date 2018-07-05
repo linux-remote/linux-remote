@@ -1,5 +1,5 @@
 # linux-remote
-English | [中文](README-zn-CN.md)
+<p  align="right"><small>English | <a href='README-zn-CN.md'>[中文]</a></small></p>
 
 A Webside Remote Desktop of Linux.
 
