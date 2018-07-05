@@ -1,4 +1,6 @@
 # linux-remote
+English | [中文](README-zn-CN.md)
+
 A Webside Remote Desktop of Linux.
 
 This project is a guide for two major projects:<br>
