@@ -4,8 +4,8 @@
 A Webside Remote Desktop of Linux.
 
 This project is a guide for two major projects:<br>
-[**client**](https://github.com/linux-remote/client)<br>
-[**server**](https://github.com/linux-remote/server)
+[**client**](https://github.com/linux-remote/client) 1.2.3<br>
+[**server**](https://github.com/linux-remote/server) 1.6.0
 ## Requested
 - Linux.
 - Nodejs.
