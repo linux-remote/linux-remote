@@ -12,7 +12,7 @@
 - Linux 上需要有 SSH 服务器。(只是用来登录)
 - 最新的 Chrome 浏览器。
 ## 线上演示
-https://lr.godmod.cn
+https://demo.linux-remote.org
 <br>
 用户名: **guest** <br>
 密码: **123**
