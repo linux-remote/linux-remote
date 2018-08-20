@@ -12,7 +12,7 @@ This project is a guide for two major projects:<br>
 - SSH server on the Linux.(just use it for login)
 - Latest Chrome browsers.
 ## Online Demo
-https://lr.godmod.cn
+https://demo.linux-remote.org
 <br>
 username: **guest** <br>
 password: **123**
