@@ -1,6 +1,4 @@
 # linux-remote
-<sub>English | [中文](README-zn-CN.md)</sub>
-
 A Webside Remote Desktop of Linux.
 
 This project is a guide for two major projects:<br>
@@ -43,7 +41,8 @@ If you don't want use **root** to start up. You should use: `sudo chown -R $(who
 **Step 5:** `node init`
 
 It will generate config.js, and set permission. For The Security, The website can only start up by yourself or root.
-<br>
+
+
 
 **Step 6:** Setting `config.js`:
 ```js
@@ -67,33 +66,23 @@ module.exports = {
 ## Start
 `node index.js`
 
-<br>
+
+
 
 You also can use some process manager like `pm2`:
 
 `pm2 start index.js -o /dev/null -e /tmp/linux-remote-err.log --name linux-remote`
 
-<br>
+
+
 
 ## Update
 `cd /opt/linux-remote && npm update`
 
-## Todo
-- C++ addons for json api.
-- Webscket push Server.
-- Third party app and language package.
-- Beautiful UI.
-- Optimization
-
 ## Donate
-Donate me or be my sponsor.<br>
 
 | Paypal | AliPay | WechatPay |
 | ------------- | ------------- | ------------- |
 | <a href="https://www.paypal.me/hezedu" target="_blank"><img src="https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png"></a> | ![image](https://github.com/hezedu/SomethingBoring/blob/master/pay/alipay.png?raw=true&v=2) | ![image](https://github.com/hezedu/SomethingBoring/blob/master/pay/wxpay.png?raw=true&v=2) |
 
-## Patreon
-[Du Wei is creating linux-remote](https://www.patreon.com/duwei)
-
-## Thanks For
 
