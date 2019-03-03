@@ -6,8 +6,8 @@ This project is a guide for two major projects:<br>
 [**server**](https://github.com/linux-remote/server) 1.6.1
 ## Requested
 - Linux.
-- Nodejs.
-- SSH server on the Linux.(just use it for login)
+- Nodejs 8+.
+- SSH server on the Linux.(just used for login)
 - Latest Chrome browsers.
 ## Online Demo
 https://demo.linux-remote.org
