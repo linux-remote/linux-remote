@@ -26,7 +26,6 @@ ___/opt___ dir only writable for root. so you should use: `sudo`
 or:<br>
 `sudo wget https://github.com/linux-remote/linux-remote/archive/master.zip -O "linux-remote.zip" && sudo unzip -q linux-remote.zip && sudo mv linux-remote-master linux-remote && sudo rm linux-remote.zip`
 
-If you don't want use **root** to start up. You should use: `sudo chown -R $(whoami) linux-remote`
 
 <br>
 
@@ -40,7 +39,7 @@ If you don't want use **root** to start up. You should use: `sudo chown -R $(who
 
 **Step 5:** `node init`
 
-It will generate config.js, and set permission. For The Security, The website can only start up by yourself or root.
+It will generate config.js, and set permission. For The Security, The website can only start up by root.
 
 
 
