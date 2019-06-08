@@ -1,15 +1,19 @@
 {
   "name": "linux-remote",
-  "version": "1.0.7",
-  "author": "Du Wei <hezedu@hotmail.com>",
+  "version": "2.0.0",
+  "author": {
+    "name": "Du Wei",
+    "email": "hezedu@hotmail.com"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:linux-remote/server.git"
   },
   "dependencies": {
-    "linux-remote-server": "latest",
-    "linux-remote-client": "latest"
+    "linux-remote-server": "2.x.x",
+    "@linux-remote/user-server": "2.x.x",
+    "linux-remote-client": "2.x.x"
   },
   "license": "MIT",
   "email": "hezedu@hotmail.com",
