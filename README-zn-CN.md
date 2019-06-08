@@ -1,4 +1,5 @@
 # linux-remote
+# 该文档已过期
 [English](README.md) | 中文
 
 一个网页端的 Linux 远程桌面。
