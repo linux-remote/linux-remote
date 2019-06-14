@@ -64,11 +64,6 @@ module.exports = {
 
 linux-remote Can't start without root user identity, because the `login` shell cannot possibly work without effective root.
 
-<br>
-<br>
-You also can use some process manager like `pm2`:
-
-`sudo pm2 start index.js -o /dev/null -e /tmp/linux-remote-err.log --name linux-remote`
 
 ## Update
 `cd /opt/linux-remote && npm update`
@@ -76,10 +71,6 @@ You also can use some process manager like `pm2`:
 - `linux-remote-client` updated, you don't need restart server. Just need refresh browser.
 - `@linux-remote/user-server` updated, you don't need restart server. Logined user need relogin.
 - `linux-remote-server` updated, you need restart server. All logined user force logout when you restart server.
-
-
-such as `pm2`:
-`pm2 restart linux-remote`
 
 
 ## Donate
