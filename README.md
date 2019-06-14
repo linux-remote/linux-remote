@@ -68,9 +68,9 @@ linux-remote Can't start without root user identity, because the `login` shell c
 ## Update
 `cd /opt/linux-remote && npm update`
 
-- `linux-remote-client` updated, you don't need restart server. Just need refresh browser.
-- `@linux-remote/user-server` updated, you don't need restart server. Logined user need relogin.
-- `linux-remote-server` updated, you need restart server.  All logined user force logout when you restart server.
+- `linux-remote-client` Updated, you don't need restart server. Just need refresh browser.
+- `@linux-remote/user-server` Updated, you don't need restart server. Logined user need relogin.
+- `linux-remote-server` Updated, you need restart server.  All logined user force logout when you restart server.
 
 
 ## Donate
