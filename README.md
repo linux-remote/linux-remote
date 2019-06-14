@@ -7,11 +7,11 @@ A Webside Remote Desktop of Linux.
 - [Node.js](https://nodejs.org) 8+. and ensure all users are available.
 
 ## Browsers Compatibility
-Latest Chrome And Latest Firefox work fine. 
+Latest **Chrome** And Latest **Firefox** work fine. 
 
-Not IE.
+Not ___IE___.
 
-Edge and Safari unknown(it should be OK).
+**Edge** and **Safari** unknown(it should be OK).
 
 ## Online Demo
 https://demo.linux-remote.org
