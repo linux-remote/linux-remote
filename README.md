@@ -70,7 +70,7 @@ linux-remote Can't start without root user identity, because the `login` shell c
 
 - `linux-remote-client` updated, you don't need restart server. Just need refresh browser.
 - `@linux-remote/user-server` updated, you don't need restart server. Logined user need relogin.
-- `linux-remote-server` updated, you need restart server. All logined user force logout when you restart server.
+- `linux-remote-server` updated, you need restart server. Warning, All logined user force logout when you restart server.
 
 
 ## Donate
