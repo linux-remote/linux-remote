@@ -10,4 +10,4 @@ const config = require('./config');
 client.publicPath = publicPath;
 config.client = client;
 config.userServerMain = userServer;
-return server(config);
+server(config);
