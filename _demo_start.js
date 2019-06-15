@@ -21,6 +21,6 @@ const demoServer = https.createServer({
 }, app);
 demoServer.listen(demoConf.port);
 demoServer.on('listening', () => {
-  console.log(`linux remote demo server start on ${demoConf.port}!\n`);
+  console.log('linux remote demo server start on ' +  demoConf.port + '\n');
 });
 handleServerUpgrade(demoServer);
