@@ -11,6 +11,6 @@ tplStr = tplStr.replace('{{sessionSecret}}', secret);
 var configPath = path.join(__dirname, 'config.js');
 fs.writeFileSync(configPath, tplStr);
 
-execSync('chmod 700 ' + configPath);
+execSync('chmod 500 ' + configPath);
 
 console.log('\nlinux-remote init OK!\n');
