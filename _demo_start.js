@@ -2,8 +2,11 @@
 
 const https = require('https');
 const fs = require('fs');
-const {app, handleServerUpgrade} = require('./index.js');
-
+const path = require('path');
+const app = require('./index.js');
+let _wsPath = require.resolve('linux-remote-server');
+_wsPath = path.resolve(_wsPath, '../ws-server.js');
+const handleServerUpgrade = require(_wsPath);
 const demoConf = {
   port: 3003,
   ssl: {
@@ -18,6 +21,6 @@ const demoServer = https.createServer({
 }, app);
 demoServer.listen(demoConf.port);
 demoServer.on('listening', () => {
-  console.log('linux remote demo server start!\n');
+  console.log(`linux remote demo server start on ${demoConf.port}!\n`);
 });
 handleServerUpgrade(demoServer);
