@@ -12,9 +12,9 @@
     "url": "git@github.com:linux-remote/server.git"
   },
   "dependencies": {
-    "linux-remote-server": "2.x.x",
-    "linux-remote-user-server": "2.x.x",
-    "linux-remote-client": "2.x.x"
+    "linux-remote-server": "^2.0.3",
+    "linux-remote-user-server": "^2.0.0",
+    "linux-remote-client": "^2.0.0"
   },
   "license": "MIT",
   "email": "hezedu@hotmail.com",
