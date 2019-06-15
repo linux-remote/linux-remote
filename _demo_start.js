@@ -1,6 +1,9 @@
 // Just use for demo
+
+const https = require('https');
+
 const {app, handleServerUpgrade} = require('./index.js');
-const path = require('path');
+
 const demoConf = {
   port: 3003,
   ssl: {
