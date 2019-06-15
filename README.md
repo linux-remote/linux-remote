@@ -80,7 +80,7 @@ Configured with SSL certificate, your connection ( https and wss ) is secure. An
 If you don't have an SSL certificate, 
 You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one.
 
-It supports IP. You can finish its [demo](https://github.com/linux-remote/ssl-self-signed#demo), and Visit https://149.129.62.26:3003
+It supports IP. You can finish its [demo](https://github.com/linux-remote/ssl-self-signed#demo), and then visit https://149.129.62.26:3003
 
 
 ## Donate
