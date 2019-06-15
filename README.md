@@ -78,10 +78,7 @@ So linux-remote Can't cannot possibly work without effective root too.
 Configured with SSL certificate, your connection ( https and wss ) is secure. And you don't need verifying the Host Key first time like SSH.
 
 If you don't have an SSL certificate, 
-You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one.
-
-It supports IP. You can finish its [demo](https://github.com/linux-remote/ssl-self-signed#demo), and then visit https://149.129.62.26:3003
-
+You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one ( supports IP ).
 
 ## Donate
 [patreon](https://www.patreon.com/hezedu): Du Wei is creating linux-remote
