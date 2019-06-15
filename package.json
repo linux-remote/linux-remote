@@ -6,6 +6,7 @@
     "email": "hezedu@hotmail.com"
   },
   "main": "index.js",
+  "files": ["init.js", "index.js"],
   "repository": {
     "type": "git",
     "url": "git@github.com:linux-remote/server.git"
