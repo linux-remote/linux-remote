@@ -14,10 +14,10 @@ Not ___IE___.
 
 ## Online Demo
 First register a new user: 
-http://149.129.62.26:3001
+http://149.129.62.26:3000
 
 Then visit demo:
-http://149.129.62.26:3000
+http://149.129.62.26:3001
 
 ## Install
 **Step 1:**
