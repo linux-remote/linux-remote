@@ -1,5 +1,5 @@
 # linux-remote
-Let your Linux server have the GUI in one minute.
+A Webside Remote Desktop of Linux.
 
 ## Requested
 - Linux.
@@ -13,9 +13,11 @@ Not ___IE___.
 **Edge** and **Safari** unknown(it should be OK).
 
 ## Online Demo
-https://demo.linux-remote.org
+First register a new user: 
+http://149.129.62.26:3001
 
-<br>
+Then visit demo:
+http://149.129.62.26:3000
 
 ## Install
 **Step 1:**
@@ -30,7 +32,7 @@ or:<br>
 
 **Step 2:**  `sudo node init`
 
-It will generate config.js, and set permission: Only `root` users can read it..
+It will generate config.js, and set permission: Only `root` users can read it.
 
 <br>
 
@@ -61,7 +63,8 @@ module.exports = {
 ## Start
 `sudo node index.js`
 
-linux-remote Can't start without root user identity, because the `login` shell cannot possibly work without effective root.
+Because [server](https://github.com/linux-remote/server) use login shell, and the login shell cannot possibly work without effective root.
+So linux-remote Can't cannot possibly work without effective root too.
 
 
 ## Update
@@ -71,6 +74,13 @@ linux-remote Can't start without root user identity, because the `login` shell c
 - `@linux-remote/user-server` Updated, you don't need restart server. Logined user need relogin.
 - `linux-remote-server` Updated, you need restart server.  All logined user force logout when you restart server.
 
+## Secure
+Configured with SSL certificate, your connection ( https and wss ) is secure. And you don't need verifying the Host Key first time like SSH.
+
+If you don't have an SSL certificate, 
+You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one ( supports IP ).
+
+
 
 ## Donate
 [patreon](https://www.patreon.com/hezedu): Du Wei is creating linux-remote
@@ -78,5 +88,4 @@ linux-remote Can't start without root user identity, because the `login` shell c
 | Paypal | AliPay | WechatPay |
 | ------------- | ------------- | ------------- |
 | <a href="https://www.paypal.me/hezedu" target="_blank"><img src="https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png" width="150"></a> | <img src="https://github.com/hezedu/SomethingBoring/blob/master/pay/alipay.png?raw=true&v=2" width="150"> | <img src="https://github.com/hezedu/SomethingBoring/blob/master/pay/wxpay.png?raw=true&v=2" width="150">
-
 
