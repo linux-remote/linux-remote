@@ -1,6 +1,5 @@
 # linux-remote
-Make you Linux sever GUI in on minite.
-A Webside Remote Desktop of Linux.
+Let your Linux server have the GUI in one minute.
 
 ## Requested
 - Linux.
