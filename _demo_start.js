@@ -1,7 +1,7 @@
 // Just use for demo
 
 const https = require('https');
-
+const fs = require('fs');
 const {app, handleServerUpgrade} = require('./index.js');
 
 const demoConf = {
