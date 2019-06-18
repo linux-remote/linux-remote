@@ -30,13 +30,14 @@ or:<br>
 <i>/opt</i> dir only writable for root. so you should use: `sudo`
 <br>
 
-**Step 2:**  `sudo node init`
-
-It will generate config.js, and set permission: Only `root` users can read it.
+**Step 2:** `npm install`
 
 <br>
 
-**Step 3:** `npm install`
+**Step 3:**  `sudo node init`
+
+It will generate config.js, and set permission: Only `root` users can read it.
+
 
 <br>
 
