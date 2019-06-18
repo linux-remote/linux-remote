@@ -34,11 +34,7 @@ or:<br>
 
 **Step 3:**  `sudo node init`
 
-It will generate config.js, and set permission: Only `root` users can read it.
-
-
-<br>
-
+It will generate `config.js`, and set permission: Only `root` users can read it.
 ## Setting
 
 modify `./config.js`:
