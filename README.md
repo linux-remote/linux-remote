@@ -14,10 +14,10 @@ Not ___IE___.
 
 ## Online Demo
 First register a new user: 
-http://149.129.62.26:3000
+https://register.linux-remote.org
 
 Then visit demo:
-http://149.129.62.26:3001
+https://demo.linux-remote.org
 
 ## Install
 **Step 1:**
