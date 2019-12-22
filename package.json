@@ -5,19 +5,15 @@
     "name": "Du Wei",
     "email": "hezedu@hotmail.com"
   },
-  "main": "index.js",
+  "bin": {
+    "linux-remote": "index.js"
+  },
   "files": [
-    "init.js",
     "index.js"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:linux-remote/server.git"
-  },
-  "dependencies": {
-    "linux-remote-client": "^2.0.2",
-    "linux-remote-server": "^2.0.6",
-    "linux-remote-user-server": "^2.0.0"
+    "url": "git@github.com:linux-remote/linux-remote.git"
   },
   "license": "MIT",
   "email": "hezedu@hotmail.com",

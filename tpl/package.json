@@ -1,0 +1,18 @@
+{
+  "name": "linux-remote",
+  "version": "2.0.6",
+  "private": true,
+  "main": "index.js",
+  "author": {
+    "name": "Du Wei",
+    "email": "hezedu@hotmail.com"
+  },
+  "email": "hezedu@hotmail.com",
+  "description": "A webside remote desktop of Linux.",
+  "dependencies": {
+    "linux-remote-client": "^2.0.2",
+    "linux-remote-server": "^2.0.6",
+    "linux-remote-user-server": "^2.0.0"
+  },
+  "license": "MIT"
+}
