@@ -5,7 +5,7 @@ Zero-dependency CLI.
 ## Requested
 - Linux.
 - [Node.js](https://nodejs.org) 8+. and ensure all users are available.
-- A proper C++ compiler toolchain, like [GCC](https://gcc.gnu.org/).
+- A proper C compiler toolchain, like [GCC](https://gcc.gnu.org/).
 ## Browsers Compatibility
 Latest **Chrome** And Latest **Firefox** work fine. 
 
@@ -29,8 +29,8 @@ https://demo.linux-remote.org
 
 `linux-remote init`
 
-If you don't have GCC and want to use other compilers, You can add a parameter `cppBuildTpl`. For example(using clang):<br>
-`linux-remote init cppBuildTpl='clang++ {{src}} -o {{out}}'`
+If you don't have GCC and want to use other compilers, You can add a parameter `cBuildTpl`. For example(using clang):<br>
+`linux-remote init cBuildTpl='clang {{src}} -o {{out}}'`
 
 **Step 3:**
 ```
