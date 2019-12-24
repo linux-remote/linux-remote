@@ -7,7 +7,7 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
-
+        setuid(0);
         int i;
         string args = "";
 

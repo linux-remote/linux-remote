@@ -99,10 +99,13 @@ npm uninstall linux-remote -g
     app.set('trust proxy', true);
   },
 
-  sessionOptions: {
+  session: {
     // Same as: https://github.com/expressjs/session#sessionoptions
     // But only the following items are allowed to be configured:
     // proxy, cookie.sameSite, cookie.secure
+    // name
+    // sameSite true X
+    // secure default is config.secure
   }
 
  */
