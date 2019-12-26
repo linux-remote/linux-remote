@@ -45,17 +45,26 @@ module.exports = {
   port: 3001, // Website listen port. default: 3001
 
   secure : false, // http model, default.
-  
   /*
   // Provide an Object to enter https model: 
-
   secure: {
-    certPath: '/somedir/cert.pem',
-    keyPath: '/somedir/privkey.pem', 
+    certPath: '/xxx/xxx', 
+    keyPath: '/xxx/xxx', 
+    caPath: '/xxx/xxx', 
 
     //... Other options same as https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
+    // and cert, key, ca will take precedence.
   }
   */
+
+  
+  trustProxy: false, // If you used proxy, You need set it. Otherwise, you will not get the real IP when you login.
+  // More settings:  https://expressjs.com/en/guide/behind-proxies.html
+
+  cookieSecure: false, // If you are use https, You should set it true.
+
+  xPoweredBy: false, // Enables the "X-Powered-By: Express" HTTP header.
+
 };
 ```
 For more please visit: [Advanced Setting](#advanced-setting.md)
@@ -84,34 +93,6 @@ linux-remote uninit
 npm uninstall linux-remote -g
 ```
 
-## Advanced Setting
-`config.js` Advanced Setting.
-```js
-{
- //...
-  before: null, //  Express middleware Like Webpack configuration's before. default: null.
-
-  /*
-  // Or provide an Function to enter https model: 
-
-  before: function (app){
-    app.enable('x-powered-by');
-    app.set('trust proxy', true);
-  },
-
-  session: {
-    // Same as: https://github.com/expressjs/session#sessionoptions
-    // But only the following items are allowed to be configured:
-    // proxy, cookie.sameSite, cookie.secure
-    // name
-    // sameSite true X
-    // secure default is config.secure
-  }
-
- */
-}
-
-```
 ## Other
 <!--Configured with SSL certificate, your connection ( https and wss ) is secure. And you don't need verifying the Host Key first time like SSH.-->
 If you don't have an SSL/TLS certificate, You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one ( supports IP ).
