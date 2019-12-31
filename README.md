@@ -52,12 +52,17 @@ module.exports = {
   /*
   // Provide an Object to enter https model: 
   secure: {
-    certPath: '/xxx/xxx', 
     keyPath: '/xxx/xxx', 
+    keyPath pfxPath 基础验证：其它人不可读写。
+    certPath: '/xxx/xxx', 
+    
     caPath: '/xxx/xxx', // Optionally
 
     //... Other options same as https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
     // and cert, key, ca will take precedence.
+    // keyPath or pfxPath primisonn Authority is too large.  
+    // chown linux-remote keyfile
+    // chmod 400 keyfile
   }
   */
 
@@ -82,9 +87,11 @@ module.exports = {
 };
 ```
 ## Management
+<!-- manager 去掉。
 You can add a normal user for management. So you will not need to enter `sudo`.
 - add manager: `usermod -a -G linux-remote username`
-- remove manager: `gpasswd -d username linux-remote` <!-- WTF name of gpasswd https://unix.stackexchange.com/questions/10852/whats-the-difference-between-sbin-nologin-and-bin-false -->
+- remove manager: `gpasswd -d username linux-remote`--> 
+<!-- WTF name of gpasswd https://unix.stackexchange.com/questions/10852/whats-the-difference-between-sbin-nologin-and-bin-false -->
 ### Start 
 `linux-remote start`
 ### Stop 
