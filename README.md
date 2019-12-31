@@ -24,7 +24,7 @@ https://demo.linux-remote.org
 **Step 1:**
 
 `npm install linux-remote -g`
-The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easily -->visible security.
+The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easily -->visible security for SUDO filed.
 **Step 2:**
 
 `linux-remote init`
