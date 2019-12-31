@@ -1,9 +1,9 @@
 # linux-remote
-A Webside Remote Desktop of Linux.
+<!-- A Webside Remote Desktop of Linux. -->
+Linux Web Remote Desktop.
 
-Zero-dependency CLI.
 ## Requested
-- Linux.
+- [Linux](https://github.com/torvalds/linux) 2.6+.
 - [Node.js](https://nodejs.org) 8+. and ensure all users are available.
 - A proper C compiler toolchain, like [GCC](https://gcc.gnu.org/).
 ## Browsers Compatibility
@@ -24,7 +24,7 @@ https://demo.linux-remote.org
 **Step 1:**
 
 `npm install linux-remote -g`
-
+The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easily -->visible security.
 **Step 2:**
 
 `linux-remote init`
@@ -32,6 +32,7 @@ https://demo.linux-remote.org
 If you don't have GCC and want to use other compilers, You can add a parameter `cBuildTpl`. For example(using clang):<br>
 `linux-remote init cBuildTpl='clang {{src}} -o {{out}}'`
 
+<!-- This command requires root authority. -->
 **Step 3:**
 ```
 cd /opt/linux-remote
@@ -43,14 +44,17 @@ modify `./config.js`:
 ```js
 module.exports = {
   port: 3001, // Website listen port. default: 3001
+  host: undefined, // 
+  // selfsigned ?
+  // https://github.com/jfromaniello/selfsigned
 
-  secure : false, // http model, default.
+  secure : null, // http model, default: null.
   /*
   // Provide an Object to enter https model: 
   secure: {
     certPath: '/xxx/xxx', 
     keyPath: '/xxx/xxx', 
-    caPath: '/xxx/xxx', 
+    caPath: '/xxx/xxx', // Optionally
 
     //... Other options same as https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
     // and cert, key, ca will take precedence.
@@ -58,38 +62,51 @@ module.exports = {
   */
 
   
-  trustProxy: false, // If you used proxy, You need set it. Otherwise, you will not get the real IP when you login.
+  trustProxy: false, // Boolean, If you used proxy, You need set it. Otherwise, you will not get the real IP when you login.
   // More settings:  https://expressjs.com/en/guide/behind-proxies.html
 
-  cookieSecure: false, // If you are use https, You should set it true.
+  xPoweredBy: false, // Boolean, Enables the "X-Powered-By: Express" HTTP header.
 
-  xPoweredBy: false, // Enables the "X-Powered-By: Express" HTTP header.
+
+  // ----------------- hotload -----------------
+  // You change Just need linux-remote hotload.
+  hotload: {
+    cookieSecure: undefined, // Boolean, Cookie's option secure. If you are use https, You can set it true.
+    publicCDN: null,
+    publicCDNTplMap: {
+      Jquery: 'https://bottom.cn/abc{{version}}/.js'
+    },
+    wsZip: true // ws 压缩
+  }
 
 };
 ```
-For more please visit: [Advanced Setting](#advanced-setting.md)
-
-## Start 
-Start as non root user: linux-remote.<br>
+## Management
+You can add a normal user for management. So you will not need to enter `sudo`.
+- add manager: `usermod -a -G linux-remote username`
+- remove manager: `gpasswd -d username linux-remote` <!-- WTF name of gpasswd https://unix.stackexchange.com/questions/10852/whats-the-difference-between-sbin-nologin-and-bin-false -->
+### Start 
 `linux-remote start`
-## Stop 
+### Stop 
 `linux-remote stop`
 
-## Update 
+### Update 
 `linux-remote update`
 - `linux-remote-client` Updated, you don't need restart server. Just need refresh browser.
 - `@linux-remote/user-server` Updated, you don't need restart server. Logined user need relogin.
 - `linux-remote-server` Updated, you need restart server.  All logined user force logout when you restart server.
 
-## Reload 
+### Reload 
 `linux-remote reload`
 <!--
 ## hotload 
 `linux-remote hotload`
 -->
 ## uninstall 
+groupdel ?
 ```
 linux-remote uninit
+
 npm uninstall linux-remote -g
 ```
 
