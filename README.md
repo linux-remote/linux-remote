@@ -24,7 +24,9 @@ https://demo.linux-remote.org
 **Step 1:**
 
 `npm install linux-remote -g`
+
 The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easily -->visible security for SUDO filed.
+
 **Step 2:**
 
 `linux-remote init`
@@ -35,8 +37,7 @@ If you don't have GCC and want to use other compilers, You can add a parameter `
 <!-- This command requires root authority. -->
 **Step 3:**
 ```
-cd /opt/linux-remote
-npm install
+cd /opt/linux-remote && npm install
 ```
 ## Config
 
@@ -94,6 +95,8 @@ You can add a normal user for management. So you will not need to enter `sudo`.
 <!-- WTF name of gpasswd https://unix.stackexchange.com/questions/10852/whats-the-difference-between-sbin-nologin-and-bin-false -->
 ### Start 
 `linux-remote start`
+
+Start as user linux-remote
 ### Stop 
 `linux-remote stop`
 
