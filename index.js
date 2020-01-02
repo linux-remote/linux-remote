@@ -1,4 +1,4 @@
-const { spawnSync } = require('child_process');
+const { spawnSync, execSync } = require('child_process');
 
 const args = process.argv;
 const nodeSh = args.shift();
@@ -10,7 +10,7 @@ switch(command){
   case 'init':
   case 'uninit':
     _spawn();
-    return;
+    break;
 }
 
 
@@ -20,8 +20,14 @@ process.setgid('linux-remote');
 switch(command){
   case 'init':
   case 'uninit':
+  case 'update':
     _spawn();
-    return;
+    break;
+  case 'install':
+    execSync('npm install', {
+      cwd: '/opt/linux-remote'
+    });
+    break;
 }
 
 function _spawn(){

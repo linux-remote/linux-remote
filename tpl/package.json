@@ -10,9 +10,9 @@
   "email": "hezedu@hotmail.com",
   "description": "A webside remote desktop of Linux.",
   "dependencies": {
-    "linux-remote-client": "^2.0.2",
-    "linux-remote-server": "^2.0.6",
-    "linux-remote-user-server": "^2.0.0"
+    "linux-remote-client": "latest",
+    "linux-remote-server": "latest",
+    "linux-remote-user-server": "latest"
   },
   "license": "MIT"
 }
