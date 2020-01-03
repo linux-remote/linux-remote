@@ -1,32 +1,28 @@
 const { spawnSync, execSync } = require('child_process');
-
+const { username } = require('./constant');
+const os = require('os');
 const args = process.argv;
 const nodeSh = args.shift();
 args.shift();
 const command = args.shift();
 
 
-switch(command){
-  case 'init':
-  case 'uninit':
-    _spawn();
-    break;
+if(command === 'init' || command === 'uninit'){
+  _spawn();
+  return;
 }
 
-
-process.setuid('linux-remote');
-process.setgid('linux-remote');
+const userInfo = os.userInfo();
+// Run as user: linux-remote.
+if(userInfo.username !== username){
+  process.setuid('linux-remote');
+  process.setgid('linux-remote');
+}
 
 switch(command){
-  case 'init':
-  case 'uninit':
   case 'update':
-    _spawn();
-    break;
   case 'install':
-    execSync('npm install', {
-      cwd: '/opt/linux-remote'
-    });
+    _spawn();
     break;
 }
 

@@ -50,6 +50,7 @@ module.exports = {
   // https://github.com/jfromaniello/selfsigned
 
   secure : null, // http model, default: null.
+  userTimeout: 15 * 1000 * 60, // 无操作 15 分钟退出。
   /*
   // Provide an Object to enter https model: 
   secure: {
