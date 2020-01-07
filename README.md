@@ -83,7 +83,12 @@ module.exports = {
     publicCDNTplMap: {
       Jquery: 'https://bottom.cn/abc{{version}}/.js'
     },
-    wsZip: true // ws 压缩
+    wsZip: true, // ws 压缩
+
+    // CORS 没必要，publicCDN 把除了 index.html 外的东西全放外面
+    // index 也可动态生成。<ejs?>
+    // CORS: false, // 前后端分离
+    // sssCA: '/somePath' // 只在前后端分离时作用
   }
 
 };
