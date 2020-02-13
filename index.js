@@ -1,5 +1,6 @@
-const { spawnSync, execSync } = require('child_process');
-const { username } = require('./lib/constant');
+const { execSync } = require('child_process');
+const { username, projectName, homeDir } = require('./lib/constant');
+const { errLog, warnLog } = require('./lib/util');
 const os = require('os');
 
 const args = process.argv;
@@ -9,36 +10,27 @@ let params = args.slice(3);
 params = params.length ? ' ' + params.join(' ') : '';
 const cmd = `${nodeSh} ./lib/${command}.js${params}`;
 
-if(command === 'init' || command === 'uninit'){
+// 'root' user field:
+if(command === 'init' || 
+  command === 'su' || 
+  command === 'uninit'){
   _execSync(cmd);
   return;
 }
 
-const lrCmdMap = new Map([
-  ['start', true],
-  ['update', true],
-  ['install', true],
-]);
-
-if(lrCmdMap.has(command)){
-  // Run as user: linux-remote.
-  // process.setgid('linux-remote') groups is: linux-remote root
-  // used 'runuser' groups is: linux-remote
-
-  // process.argv not have single quotes;
-  const userInfo = os.userInfo();
-  if(userInfo.username !== username){
-    let runuserCmd = `runuser ${username} --shell=${process.env.SHELL} --command='${args.join(' ')}'`
-    _execSync(runuserCmd);
-    // LR_CMD_PARAMS=${_eCmd(params)} ${nodeSh} ${args[1]} ${command}
-  } else {
-    // let _lrCmd = cmd;
-    // if(process.env.LR_CMD_PARAMS){
-    //   _lrCmd = _lrCmd + _dCmd(process.env.LR_CMD_PARAMS);
-    // }
-    _execSync(cmd);
-  }
+const userInfo = os.userInfo();
+if(userInfo.username !== username){
+  warnLog(`You need run command '${command}' as '${username}' user.`);
+  console.log(`You can use the following command to switch:`);
+  console.log(`\n${projectName} su\n`);
+  return;
 }
+
+// 'linux-remote' user field:
+// proxy to @linux-remote/manage
+execSync(`linux-remote-manage ${command}${params}`, {
+  cwd: homeDir
+});
 
 
 function  _execSync(cmd){

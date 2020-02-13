@@ -1,4 +1,4 @@
-// login: Cannot possibly work without effective root.
+// Authorize linux-remote group to login shell.
 #include <unistd.h>
 
 int main(int argc, char* argv[])
