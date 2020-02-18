@@ -13,8 +13,7 @@
     "@linux-remote/manage": "latest",
     "@linux-remote/session-store": "latest",
     "@linux-remote/server": "latest",
-    "@linux-remote/user-server": "latest",
-    "@linux-remote/client": "latest"
+    "@linux-remote/user-server": "latest"
   },
   "license": "MIT"
 }
