@@ -1,6 +1,6 @@
 {
-  "name": "linux-remote",
-  "version": "2.0.6",
+  "name": "linux-remote-project",
+  "version": "3.0.0",
   "private": true,
   "main": "index.js",
   "author": {
@@ -8,7 +8,7 @@
     "email": "hezedu@hotmail.com"
   },
   "email": "hezedu@hotmail.com",
-  "description": "A webside remote desktop of Linux.",
+  "description": "Project of Linux Web Remote Desktop.",
   "dependencies": {
   },
   "license": "MIT"
