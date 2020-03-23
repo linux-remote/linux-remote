@@ -15,13 +15,6 @@
     "type": "git",
     "url": "git@github.com:linux-remote/linux-remote.git"
   },
-  "projectVersions": {
-    "cli": "0.0.2",
-    "session-store": "0.0.1",
-    "client": "0.0.3",
-    "user-server": "0.0.4",
-    "server": "0.0.2"
-  },
   "license": "MIT",
   "email": "hezedu@hotmail.com",
   "description": "Linux Web Remote Desktop.",
