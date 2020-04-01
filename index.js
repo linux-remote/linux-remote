@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
-const { username, projectName, homeDir } = require('./lib/constant');
-const { errLog, warnLog } = require('./lib/util');
+const { username,  homeDir } = require('./lib/constant');
+const {  warnLog } = require('./lib/util');
 const os = require('os');
 
 const args = process.argv;
@@ -12,17 +12,20 @@ const cmd = `${nodeSh} ./lib/${command}.js${params}`;
 
 // 'root' user field:
 if(command === 'init' || 
-  command === 'su' || 
   command === 'uninit'){
-  _execSync(cmd);
+  execSync(cmd, {
+    cwd: __dirname,
+    stdio: 'inherit'
+  });
   return;
 }
 
+// switch to 'linux-remote' user
 const userInfo = os.userInfo();
 if(userInfo.username !== username){
   warnLog(`You need run command '${command}' as '${username}' user.`);
   console.log(`You can use the following command to switch:`);
-  console.log(`\n${projectName} su\n`);
+  console.log(`\nsudo su ${username} --shell="bin/bash"\n`);
   return;
 }
 
@@ -31,19 +34,3 @@ if(userInfo.username !== username){
 execSync(`linux-remote-manage ${command}${params}`, {
   cwd: homeDir
 });
-
-
-function  _execSync(cmd){
-  console.log(cmd);
-  execSync(cmd, {
-    cwd: __dirname,
-    stdio: 'inherit'
-  });
-}
-
-// function _eCmd(cmd){  // ' -> %27 ' ' -> %20
-//   return escape(cmd);
-// }
-// function _dCmd(ecmd){
-//   return unescape(ecmd);
-// }

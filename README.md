@@ -4,14 +4,14 @@ Linux Web Remote Desktop.
 
 ## Requested
 - [Linux](https://github.com/torvalds/linux) 2.6+.
-- [Node.js](https://nodejs.org) 8+. and ensure all users are available.
-- A proper C compiler toolchain, like [GCC](https://gcc.gnu.org/).
+- [Node.js](https://nodejs.org) 12+. and ensure all users are available.
+- A proper C/C++ compiler toolchain, like [GCC](https://gcc.gnu.org/).
 ## Browsers Compatibility
-Latest **Chrome** And Latest **Firefox** work fine. 
+Latest **Chrome** And Latest **Firefox** work fine.
 
 Not ___IE___.
 
-**Edge** and **Safari** unknown(it should be OK).
+**Edge** and **Safari** Unknown.
 
 ## Online Demo
 First register a new user: 
@@ -21,110 +21,108 @@ Then visit demo:
 https://demo.linux-remote.org
 
 ## Install
-**Step 1:**
+### Step 1:
 
 `npm install linux-remote -g`
 
-The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easily -->visible security for SUDO filed.
+The package of linux-remote  is a Zero-dependency CLI tool, <!--One file one command. Easilyvisible security for SUDO filed. -->good for safety review. In fact, only one command requires `sudo`.
 
-**Step 2:**
+###  Step 2:
+`sudo linux-remote init`
 
-`linux-remote init`
+it will create a user linux-remote.
 
-If you don't have GCC and want to use other compilers, You can add a parameter `cBuildTpl`. For example(using clang):<br>
-`linux-remote init cBuildTpl='clang {{src}} -o {{out}}'`
+If you don't have GCC and want to use other compilers, You can set env `C_BUILD_TPL`. For example(using clang):
+`C_BUILD_TPL='clang {{src}} -o {{out}}' linux-remote init`
 
 <!-- This command requires root authority. -->
-**Step 3:**
-```
-cd /opt/linux-remote && npm install
-```
-## Config
+###  Step 3:
+`su linux-remote --shell="bin/bash"` 
 
-modify `./config.js`:
+Switch to user linux-remote. 
+
+###  Step 4:
+`cd /opt/linux-remote`
+
+Modify the `config.js`. [See below](#Config).
+###  Step 5:
+`linux-remote install`
+
+## Config
+/opt/linux-remote/config.js<br>
+<i>The `//# ` is option</i>
 ```js
 module.exports = {
-  port: 3001, // Website listen port. default: 3001
-  host: undefined, // 
-  // selfsigned ?
-  // https://github.com/jfromaniello/selfsigned
+  port: 3001, // Website listen port.
 
-  secure : null, // http model, default: null.
-  userTimeout: 15 * 1000 * 60, // 无操作 15 分钟退出。
+  //# host: undefined, // Website listen host.
+
+  secure : null, // http model
   /*
-  // Provide an Object to enter https model: 
-  secure: {
-    keyPath: '/xxx/xxx', 
-    keyPath pfxPath 基础验证：其它人不可读写。
-    certPath: '/xxx/xxx', 
-    
-    caPath: '/xxx/xxx', // Optionally
-
-    //... Other options same as https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
-    // and cert, key, ca will take precedence.
-    // keyPath or pfxPath primisonn Authority is too large.  
-    // chown linux-remote keyfile
-    // chmod 400 keyfile
-  }
+    // Or provide an Object to enter https model: 
+    secure: {
+      keyPath: '/xxx/xxx',
+      certPath: '/xxx/xxx',
+      pfxPath:  '/xxx/xxx', // eq keyPath + certPath
+      caPath: '/xxx/xxx', // Optionally
+      //... Other options same as https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
+    },
   */
 
+  cookie: {
+    //# secure: undefined,
+    sameSite: 'None'
+  },
   
-  trustProxy: false, // Boolean, If you used proxy, You need set it. Otherwise, you will not get the real IP when you login.
+  trustProxy: false, // Boolean, If you used proxy, You need set it. 
+  // Otherwise, you will not get the real IP when you login.
+  // And you can't set it true.
   // More settings:  https://expressjs.com/en/guide/behind-proxies.html
 
-  xPoweredBy: false, // Boolean, Enables the "X-Powered-By: Express" HTTP header.
-
-
-  // ----------------- hotload -----------------
-  // You change Just need linux-remote hotload.
-  hotload: {
-    cookieSecure: undefined, // Boolean, Cookie's option secure. If you are use https, You can set it true.
-    publicCDN: null,
-    publicCDNTplMap: {
-      Jquery: 'https://bottom.cn/abc{{version}}/.js'
-    },
-    wsZip: true, // ws 压缩
-
-    // CORS 没必要，publicCDN 把除了 index.html 外的东西全放外面
-    // index 也可动态生成。<ejs?>
-    // CORS: false, // 前后端分离
-    // sssCA: '/somePath' // 只在前后端分离时作用
-  }
-
+  
+  client: { // Server include client. 
+    cdn: false // Is use https://unpkg.com to load client static file.
+  },
+  /*
+    // Or set a website origin string, enables CORS model. Server will not include client.
+    // recommend.
+    client: 'http://127.0.0.1:4000',
+  */
+  
+  //# xPoweredBy: undefined // Express setttings. is enables the "X-Powered-By: Express" HTTP header.
 };
 ```
 ## Management
-<!-- manager 去掉。
-You can add a normal user for management. So you will not need to enter `sudo`.
-- add manager: `usermod -a -G linux-remote username`
-- remove manager: `gpasswd -d username linux-remote`--> 
-<!-- WTF name of gpasswd https://unix.stackexchange.com/questions/10852/whats-the-difference-between-sbin-nologin-and-bin-false -->
-### Start 
+
+### Start
 `linux-remote start`
 
-Start as user linux-remote
-### Stop 
+Start server.
+### Stop
 `linux-remote stop`
 
+Stop server. All logined user will lose session(logout).
 ### Update 
 `linux-remote update`
-- `linux-remote-client` Updated, you don't need restart server. Just need refresh browser.
-- `@linux-remote/user-server` Updated, you don't need restart server. Logined user need relogin.
-- `linux-remote-server` Updated, you need restart server.  All logined user force logout when you restart server.
 
-### Reload 
+Update project packages, and will give you a hint: whether you need to reload.
+
+### Reload
 `linux-remote reload`
-<!--
-## hotload 
-`linux-remote hotload`
--->
-## uninstall 
-groupdel ?
-```
-linux-remote uninit
 
-npm uninstall linux-remote -g
-```
+Reload server. Logined user will not lose session. 
+### Restart
+`linux-remote restart`
+
+eq `linux-remote stop and linux-remote start`
+
+All logined user will lose session(logout).
+
+## uninstall
+`sudo linux-remote uninit`<br>
+You can also simply use: `userdel -r linux-remote`.
+
+`npm uninstall linux-remote -g`
 
 ## Other
 <!--Configured with SSL certificate, your connection ( https and wss ) is secure. And you don't need verifying the Host Key first time like SSH.-->
