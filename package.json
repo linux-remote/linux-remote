@@ -1,25 +1,27 @@
 {
   "name": "linux-remote",
-  "version": "2.0.6",
+  "version": "4.0.0",
   "author": {
     "name": "Du Wei",
     "email": "hezedu@hotmail.com"
   },
-  "main": "index.js",
+  "bin": {
+    "linux-remote": "index.js"
+  },
   "files": [
-    "init.js",
+    "lib",
+    "tpl",
     "index.js"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:linux-remote/server.git"
+    "url": "git@github.com:linux-remote/linux-remote.git"
   },
-  "dependencies": {
-    "linux-remote-client": "^2.0.2",
-    "linux-remote-server": "^2.0.6",
-    "linux-remote-user-server": "^2.0.0"
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=12.14.0"
   },
-  "license": "MIT",
   "email": "hezedu@hotmail.com",
-  "description": "A webside remote desktop of Linux."
+  "description": "Linux Web Remote Desktop.",
+  "dependencies": {}
 }

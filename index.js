@@ -1,13 +1,36 @@
-if(process.env.NODE_ENV !== 'production'){
-  process.env.NODE_ENV = 'production';
-};
-console.log('linux-remote start!');
-const server = require('linux-remote-server');
-const userServer = require('linux-remote-user-server');
-const client = require('linux-remote-client');
+const { execSync } = require('child_process');
+const { username,  homeDir } = require('./lib/constant');
+const {  warnLog } = require('./lib/util');
+const os = require('os');
 
-const config = require('./config');
+const args = process.argv;
+const nodeSh = args[0];
+const command = args[2];
+let params = args.slice(3);
+params = params.length ? ' ' + params.join(' ') : '';
+const cmd = `${nodeSh} ./lib/${command}.js${params}`;
 
-config.client = client;
-config.userServerMain = userServer;
-server(config);
+// 'root' user field:
+if(command === 'init' || 
+  command === 'uninit'){
+  execSync(cmd, {
+    cwd: __dirname,
+    stdio: 'inherit'
+  });
+  return;
+}
+
+// switch to 'linux-remote' user
+const userInfo = os.userInfo();
+if(userInfo.username !== username){
+  warnLog(`You need run command '${command}' as '${username}' user.`);
+  console.log(`You can use the following command to switch:`);
+  console.log(`\nsudo su ${username} --shell="bin/bash"\n`);
+  return;
+}
+
+// 'linux-remote' user field:
+// proxy to @linux-remote/manage
+execSync(`linux-remote-manage ${command}${params}`, {
+  cwd: homeDir
+});
