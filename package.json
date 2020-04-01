@@ -15,7 +15,10 @@
     "type": "git",
     "url": "git@github.com:linux-remote/linux-remote.git"
   },
-  "license": "MIT",
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">=12.14.0"
+  },
   "email": "hezedu@hotmail.com",
   "description": "Linux Web Remote Desktop.",
   "dependencies": {}
