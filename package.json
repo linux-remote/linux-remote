@@ -1,6 +1,6 @@
 {
   "name": "linux-remote",
-  "version": "2.0.6",
+  "version": "4.0.0",
   "author": {
     "name": "Du Wei",
     "email": "hezedu@hotmail.com"
@@ -9,6 +9,8 @@
     "linux-remote": "index.js"
   },
   "files": [
+    "lib",
+    "tpl",
     "index.js"
   ],
   "repository": {
