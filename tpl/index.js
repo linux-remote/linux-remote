@@ -1,13 +1,7 @@
-if(process.env.NODE_ENV !== 'production'){
-  process.env.NODE_ENV = 'production';
-};
-console.log('linux-remote start!');
-const server = require('linux-remote-server');
-const userServer = require('linux-remote-user-server');
-const client = require('linux-remote-client');
+const path = require('path');
 
-const config = require('./config');
+process.env.LR_SERVER_PATH = require.resolve('@linux-remote/server');
+process.env.LR_USER_SERVER_PATH = require.resolve('@linux-remote/user-server');
+process.env.LR_LOGIN_BIN_PATH = path.join(__dirname, './bin/lr-login');
 
-config.client = client;
-config.userServerMain = userServer;
-server(config);
+require('@linux-remote/session-store');
