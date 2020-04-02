@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const { username,  homeDir } = require('./lib/constant');
-const {  warnLog } = require('./lib/util');
+const { warnLog } = require('./lib/util');
 const os = require('os');
 
 const args = process.argv;
@@ -23,9 +25,9 @@ if(command === 'init' ||
 // switch to 'linux-remote' user
 const userInfo = os.userInfo();
 if(userInfo.username !== username){
-  warnLog(`You need run command '${command}' as '${username}' user.`);
+  console.log(`You need run command as '${username}' user.`);
   console.log(`You can use the following command to switch:`);
-  console.log(`\nsudo su ${username} --shell="bin/bash"\n`);
+  warnLog(`\nsudo su ${username} --shell='bin/bash'\n`);
   return;
 }
 
