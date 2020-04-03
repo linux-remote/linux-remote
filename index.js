@@ -9,28 +9,27 @@ const { warnLog } = require('./lib/util');
 const args = process.argv;
 const command = args[2];
 
-// 'root' user field:
-if(command === 'init'){
+if(command === 'init'){ // sudo
 
   const init = require('./lib/init');
   init();
 
-} else if(command === 'uninit'){
+} else if(command === 'uninit'){ // sudo 
 
   const uninit = require('./lib/uninit');
   uninit();
 
 } else {
   
-  // switch to 'linux-remote' user
+  // -v everybody can be use.
   const userInfo = os.userInfo();
-  if(userInfo.username !== username){
-
+  if(command !== '-v' && userInfo.username !== username){
+    // switch to 'linux-remote' user
     console.log(`You need run command as '${username}' user.`);
     console.log(`You can use the following command to switch:`);
     warnLog(`\nsudo su ${username} -s /bin/bash\n`);
 
-  } else {
+  } else { // 'linux-remote' user.
     const manageMPath = require.resolve('@linux-remote/manage', {
       paths: [ homeDir + '/node_modules']
     });
