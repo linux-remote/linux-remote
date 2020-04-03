@@ -1,5 +1,5 @@
 {
-  "session-store": "4.0.0",
+  "session-store": "1.0.0",
   "server": "4.0.4",
   "user-server": "4.0.0",
   "client": "4.0.0",
