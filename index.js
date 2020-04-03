@@ -33,9 +33,17 @@ if(command === 'init'){
   } else {
     const manageMPath = require.resolve('@linux-remote/manage', {
       paths: [ homeDir + '/node_modules']
-    })
+    });
+
     const managerHandler = require(manageMPath);
-    managerHandler(command);
+    if(command === '-v' || 
+        command === 'update' ||
+        command === 'install'){
+      const cliVersion = require(path.join(__dirname, 'package.json')).version;
+      managerHandler(command, cliVersion);
+    } else {
+      managerHandler(command);
+    }
   }
 
   // 'linux-remote' user field:
