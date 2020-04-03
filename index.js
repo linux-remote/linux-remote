@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 "use strict";
+const path = require('path');
 const os = require('os');
 const { username, homeDir } = require('./lib/constant');
 const { warnLog } = require('./lib/util');
