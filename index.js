@@ -28,7 +28,7 @@ if(command === 'init'){
 
     console.log(`You need run command as '${username}' user.`);
     console.log(`You can use the following command to switch:`);
-    warnLog(`\nsudo su ${username} --shell='bin/bash'\n`);
+    warnLog(`\nsudo su ${username} -s /bin/bash\n`);
 
   } else {
     const manageMPath = require.resolve('@linux-remote/manage', {
