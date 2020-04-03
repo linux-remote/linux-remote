@@ -1,9 +1,9 @@
 {
-  "session-store": "4.0.0",
   "server": "4.0.5",
   "user-server": "4.0.0",
   "client": "4.0.0",
   "client-mount": "4.0.1",
+  "session-store": "4.0.0",
   "cli": "4.0.5",
-  "manage": "4.0.9"
+  "manage": "4.0.10"
 }
