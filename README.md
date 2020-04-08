@@ -8,7 +8,7 @@ Linux Web Remote Desktop.
 ## Browsers Compatibility
 Latest **Chrome** And Latest **Firefox** work fine.
 
-Not ___IE___.
+Not **IE**.
 
 **Edge** and **Safari** Unknown.
 
@@ -24,33 +24,28 @@ http://149.129.62.26:3000
 
 `npm install @linux-remote/cli -g`
 
-The [@linux-remote/cli](https://github.com/linux-remote/cli) is a Zero-dependency CLI tool, good for safety review. In fact, only one command requires `sudo`.
+This [cli](https://github.com/linux-remote/cli) is a Zero-dependency tool, good for safety review. Only one command requires `sudo`.
 
 ###  Step 2:
 `sudo linux-remote init`
 
-it will create a user linux-remote.
+It will create a user "linux-remote".
 
 If you don't have GCC and want to use other compilers, You can set env `C_BUILD_TPL`. For example(using clang):
 `C_BUILD_TPL='clang {{src}} -o {{out}}' linux-remote init`
 
-<!-- This command requires root authority. -->
 ###  Step 3:
-`su linux-remote --shell="bin/bash"` 
+`sudo su linux-remote -s /bin/bash`
 
 Switch to user linux-remote. 
 
 ###  Step 4:
 `cd /opt/linux-remote`
 
-Modify the `config.js`. [See below](#Config).
-###  Step 5:
-`linux-remote install`
+Modify the `config.js`:
 
-## Config
-/opt/linux-remote/config.js<br>
-___The `//# ` is option___
 ```js
+// The //# is option
 module.exports = {
   port: 3001, // Website listen port.
 
@@ -83,36 +78,38 @@ module.exports = {
   }
 };
 ```
-## Management
-
-### Start
+###  Step 5:
+`linux-remote install`
+###  Step 6:
 `linux-remote start`
 
-Start server.
-### Stop
+## Other Management
+The following command needs to be executed by the "linux-remote" user, except `-v`.
+
+### stop
 `linux-remote stop`
 
 Stop server. All logined user will lose session(logout).
-### Update 
+### update 
 `linux-remote update`
 
 Update project packages, and will give you a hint: whether you need to reload.
 
-### Reload
+### reload
 `linux-remote reload`
 
 Reload server. Logined user will not lose session. 
-### Restart
+### restart
 `linux-remote restart`
 
 eq `linux-remote stop and linux-remote start`
 
 All logined user will lose session(logout).
-### Version
+### version
 `linux-remote -v`
 
 View version.
-### Serverinfo
+### serverinfo
 `linux-remote serverinfo`
 
 Check server info.
@@ -124,7 +121,7 @@ You can also simply use: `userdel -r linux-remote`.
 
 `npm uninstall linux-remote -g`
 
-## Other
+## Secure
 <!--Configured with SSL certificate, your connection ( https and wss ) is secure. And you don't need verifying the Host Key first time like SSH.-->
 If you don't have an SSL/TLS certificate, You can use [ssl-self-signed](https://github.com/linux-remote/ssl-self-signed) to generate a new one ( supports IP ).
 

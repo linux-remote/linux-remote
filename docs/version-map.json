@@ -1,10 +1,10 @@
 {
- "_total": "4.28.4.28-bata",
+ "_total": "4.28.4.29-bata",
  "session-store": "4.0.1",
  "server": "4.1.0",
  "user-server": "4.0.3",
  "client": "4.0.3",
  "client-mount": "4.0.5",
- "cli": "4.0.11",
+ "cli": "4.0.12",
  "manage": "4.3.5"
 }
