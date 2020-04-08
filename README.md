@@ -1,4 +1,4 @@
-# linux-remote
+# linux-remote 4-bata
 <!-- A Webside Remote Desktop of Linux. -->
 Linux Web Remote Desktop.
 ## Requested
@@ -18,5 +18,3 @@ http://149.129.62.26:3001
 
 Then visit demo:
 http://149.129.62.26:3000
-
-# linux-remote 4 in development...
