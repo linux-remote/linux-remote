@@ -1,7 +1,7 @@
 {
- "_total": "4.28.3.35-bata",
+ "_total": "4.28.3.36-bata",
  "session-store": "4.0.1",
- "server": "4.0.9",
+ "server": "4.0.10",
  "user-server": "4.0.3",
  "client": "4.0.3",
  "client-mount": "4.0.5",
