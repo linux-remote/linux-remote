@@ -1,9 +1,9 @@
 {
-  "server": "4.0.7",
-  "user-server": "4.0.0",
-  "client": "4.0.0",
-  "client-mount": "4.0.1",
-  "session-store": "4.0.1",
-  "cli": "4.0.8",
-  "manage": "4.2.1"
+ "server": "4.0.8",
+ "user-server": "4.0.2",
+ "client": "4.0.1",
+ "client-mount": "4.0.5",
+ "session-store": "4.0.1",
+ "cli": "4.0.8",
+ "manage": "4.3.1"
 }

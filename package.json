@@ -8,6 +8,9 @@
   "bin": {
     "linux-remote": "index.js"
   },
+  "scripts": {
+    "publish": "node up-version-map.js"
+  },
   "files": [
     "lib",
     "tpl",
