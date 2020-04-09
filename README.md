@@ -13,11 +13,16 @@ Not **IE**.
 **Edge** and **Safari** Unknown.
 
 ## Online Demo
-First register a new user: 
+__First register a new user:__
+
 http://149.129.62.26:3001
 
-Then visit demo:
-http://149.129.62.26:3000
+__Then visit demo:__
+
+- HTTP: http://149.129.62.26:3000
+- Self-signed HTTPS: https://149.129.62.26:3002<br>
+Need Download [CA.crt](https://raw.githubusercontent.com/linux-remote/ssl-self-signed/master/CA-of-demo.crt), Import and restart you browser.
+Some import guide like: [window-chrome-import-guide](https://github.com/linux-remote/ssl-self-signed/blob/master/win-chrome-import-guide.md).
 
 ## Install
 ### Step 1:
