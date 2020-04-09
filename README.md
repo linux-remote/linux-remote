@@ -80,9 +80,11 @@ module.exports = {
 ```
 ###  Step 5:
 `linux-remote install`
-###  Step 6:
+
+## Start
 `linux-remote start`
 
+Runing as user "linux-remote" user.
 ## Other Management
 The following command needs to be executed by the "linux-remote" user, except `-v`.
 
