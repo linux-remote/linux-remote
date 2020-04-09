@@ -84,7 +84,7 @@ module.exports = {
 ## Start
 `linux-remote start`
 
-Start as user "linux-remote" user.
+Start server as "linux-remote" user.
 ## Other Management
 The following command needs to be executed by the "linux-remote" user, except `-v`.
 
