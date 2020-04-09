@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit:cover">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,7 +35,7 @@
   .main{
     width: 980px;
     padding-top: 10px;
-    padding-bottom: 35px;
+    padding-bottom: 40px;
     box-sizing: border-box;
     min-height: 100%;
     margin: auto;
@@ -45,7 +45,7 @@
   }
   footer{
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     left: 0;
     right: 0;
     height: 30px;
@@ -78,13 +78,78 @@
     font-weight: normal;
     margin-bottom: 2em;
   }
+  @media (max-width: 750px){
+    .main{
+      width: 100%;
+
+    }
+
+    /* body{
+      font-size: 14px;
+      padding-top: constant(safe-area-inset-top);
+      padding-left: constant(safe-area-inset-left);
+      padding-right: constant(safe-area-inset-right);
+      padding-bottom: constant(safe-area-inset-bottom);
+    }
+    .main{
+      padding-top: 35px;
+      padding-bottom: 40px;
+    }
+    footer{
+      bottom: 10px;
+      height: 30px;
+    }
+    h1{
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .logo{
+      width: 80px;
+      height: 80px;
+    }
+    a.gitgub{
+      font-size: 30px;
+      line-height: 34px;
+    } */
+    body{
+      font-size: 3.733333333333334vw;
+      padding-top: constant(safe-area-inset-top);
+      padding-left: constant(safe-area-inset-left);
+      padding-right: constant(safe-area-inset-right);
+      padding-bottom: constant(safe-area-inset-bottom);
+    }
+    .main{
+      padding-top: 9.333333333333334vw;
+      padding-bottom: 10.666666666666668vw;
+    }
+    footer{
+      bottom: 2.666666666666667vw;
+      height: 8vw;
+    }
+    h1{
+      font-size: 9.6vw;
+    }
+    h2 {
+      font-size: 7.466666666666668vw;
+    }
+    .logo{
+      width: 21.333333333333336vw;
+      height: 21.333333333333336vw;
+    }
+    a.gitgub{
+      font-size: 8vw;
+      line-height: 9.066666666666666vw;
+    }
+  }
 </style>
   </head>
 
   <body>
     <div class="main">
       <img class="logo" src="logo_LR.svg">
-      <h1>linux-remote <small style="font-size: 14px;">4 bata</small></h1>
+      <h1>linux-remote<small style="font-size: 14px;"> 4 bata</small></h1>
       <h2>The Linux Web Remote Desktop</h2>
       <!-- Repositorie: -->
       <div><a target="_blank" class="gitgub" href="https://github.com/linux-remote/linux-remote"><svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> <span>GITHUB</span></a></div>
