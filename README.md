@@ -115,8 +115,6 @@ View version.
 `linux-remote serverinfo`
 
 Check server info.
-
-All logined user will lose session(logout).
 ## uninstall
 `sudo linux-remote uninit`<br>
 You can also simply use: `userdel -r linux-remote`.
