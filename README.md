@@ -14,8 +14,7 @@ Not **IE**.
 
 ## Online Demo
 __First register a new user:__
-
-http://149.129.62.26:3001
+https://demo.linux-remote.org:3001/
 
 __Then visit demo:__
 https://demo.linux-remote.org:3000/
