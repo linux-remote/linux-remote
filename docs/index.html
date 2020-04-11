@@ -193,8 +193,8 @@
             console.log('this.responseText', this.responseText)
           }
         }
-        xhr.setRequestHeader('Cache-control', 'max-age=0');
         xhr.open("GET", "/version-map.json");
+        xhr.setRequestHeader('Cache-control', 'max-age=0');
         xhr.responseType = 'text';
         xhr.send();
       }())
