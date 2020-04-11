@@ -115,7 +115,7 @@ View version.
 `linux-remote serverinfo`
 
 Check server info.
-## uninstall
+## Uninstall
 `sudo linux-remote uninit`<br>
 You can also simply use: `userdel -r linux-remote`.
 
