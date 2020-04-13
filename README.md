@@ -65,7 +65,7 @@ module.exports = {
 
   cookie: {
     //# secure: undefined,
-    sameSite: 'None'
+    //# sameSite: undefined
   },
   
   trustProxy: false, // Boolean, If you used proxy, You need set it. 
