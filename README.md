@@ -13,10 +13,10 @@ Not **IE**.
 **Edge** and **Safari** Unknown.
 
 ## Online Demo
-__First register a new user:__
+First register a new user:
 https://demo.linux-remote.org:3001/
 
-__Then visit demo:__
+Then visit demo:
 https://demo.linux-remote.org:3000/
 
 ## Install
