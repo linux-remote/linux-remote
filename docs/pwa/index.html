@@ -17,8 +17,26 @@
 
   <body>
     <h1>Hello PWA</h1>
+    <button id="install" disabled="disabled">Install</button>
     <script>
       navigator.serviceWorker.register('/pwa/sw.js');
+    </script>
+    <script>
+      window.addEventListener('beforeinstallprompt', (event) => {
+          event.preventDefault();  // Chrome <= 67 可以阻止显示
+          const btn = document.getElementById('install');
+          btn.disabled = false;
+          btn.addEventListener('click', function(){
+            event.prompt();
+            event.userChoice.then( choiceResult => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('用户已同意添加到桌面')
+              } else {
+                console.log('用户已取消添加到桌面')
+              }
+            })
+          })
+      });
     </script>
   </body>
 </html>
