@@ -24,7 +24,7 @@ https://demo.linux-remote.org:3000/
 
 `npm install @linux-remote/cli -g`
 
-This [CLI](https://github.com/linux-remote/cli) is a Zero-dependency tool, good for safety review. Only one command requires `sudo`.
+The [@linux-remote/cli](https://github.com/linux-remote/cli) is a Zero-dependency tool, good for safety review. Only one command requires `sudo`.
 
 ###  Step 2:
 `sudo linux-remote init`
