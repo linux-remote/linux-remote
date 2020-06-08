@@ -4,7 +4,7 @@ const fs = require('fs');
 const dir = process.cwd();
 const pkg = require(path.join(dir, 'package.json'));
 let name = pkg.name.split('/')[1];
-
+name = name || 'cli';
 const version = pkg.version;
 const mapPath = path.join(__dirname, 'docs/version-map.json');
 let map = fs.readFileSync(mapPath, 'utf-8');

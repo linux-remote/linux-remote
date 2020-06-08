@@ -22,9 +22,9 @@ https://demo.linux-remote.org:3000/
 ## Install
 ### Step 1:
 
-`npm install @linux-remote/cli -g`
+`npm install linux-remote -g`
 
-The [@linux-remote/cli](https://github.com/linux-remote/cli) is a Zero-dependency tool, good for safety review. Only one command requires `sudo`.
+This [CLI](https://github.com/linux-remote/cli) tool is a Zero-dependency. good for safety review. Only one command requires `sudo`.
 
 ###  Step 2:
 `sudo linux-remote init`
