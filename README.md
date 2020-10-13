@@ -11,14 +11,13 @@ Latest **Chrome** And Latest **Firefox** work fine.
 Not **IE**.
 
 **Edge** and **Safari** Unknown.
-<!--
 ## Online Demo
 First register a new user:
 https://demo.linux-remote.org:3001/
 
 Then visit demo:
 https://demo.linux-remote.org:3000/
--->
+
 ## Install
 ### Step 1:
 
