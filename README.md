@@ -73,13 +73,19 @@ module.exports = {
   // More settings:  https://expressjs.com/en/guide/behind-proxies.html
 
   client: {
-    cdn: false // Is use https://unpkg.com to load client static file.
+    cdn: false // Use CDN to load client static files. The URL pattern must be the same as  https://unpkg.com. 
+    // Set it to false, will install and load client static module from server.
+    /* Some Public CDN root URLs:
+        https://unpkg.com
+        https://cdn.jsdelivr.net/npm
+    */
   }
 };
 ```
 ###  Step 5:
 `linux-remote install`
 
+If you can't install, You can create a file in folder B to change the registry.
 ## Start
 `linux-remote start`
 
