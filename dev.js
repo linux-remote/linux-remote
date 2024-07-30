@@ -3,6 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const PORT = 3005;
 const server = http.createServer(function(req, res){
+    if (path.normalize(decodeURI(req.url)) !== decodeURI(req.url)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
   console.log(req.method, req.url);
   let file = req.url.substr(1);
   if(!file){
