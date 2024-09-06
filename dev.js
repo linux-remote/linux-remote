@@ -8,6 +8,13 @@ const server = http.createServer(function(req, res){
   if(!file){
     file = 'index.html';
   }
+  const files = fs.readdirSync(path.join(__dirname, 'docs'));
+  if(!files.includes(file)){
+    res.statusCode = 404;
+    res.end('notFound');
+    return;
+  }
+
   fs.readFile(path.join(__dirname, 'docs/' + file), function(err, content){
     if(err){
       res.statusCode = 500;
