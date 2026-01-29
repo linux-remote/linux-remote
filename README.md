@@ -13,10 +13,10 @@ Not **IE**.
 **Edge** and **Safari** Unknown.
 ## Online Demo
 First register a new user:
-https://demo.linux-remote.org:3001/
+http://118.193.43.65:3001/
 
 Then visit demo:
-https://demo.linux-remote.org:3000/
+http://118.193.43.65:3000/
 
 ## Install
 ### Step 1:
