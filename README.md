@@ -13,10 +13,10 @@ Not **IE**.
 **Edge** and **Safari** Unknown.
 ## Online Demo
 First register a new user:
-http://118.193.43.65:3001/
+[http://118.193.43.65:3001/](http://152.32.206.156:3000/)
 
 Then visit demo:
-http://118.193.43.65:3000/
+[http://118.193.43.65:3000/](http://152.32.206.156:3001/)
 
 ## Install
 ### Step 1:
